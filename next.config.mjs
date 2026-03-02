@@ -7,6 +7,8 @@ const nextConfig = {
     images: {
         remotePatterns: [{ protocol: 'https', hostname: '**' }],
     },
+    // Don't bundle GCP Storage into serverless — use runtime copy (smaller deploy, fewer "internal error" on Vercel)
+    serverExternalPackages: ['@google-cloud/storage'],
     experimental: {
         optimizePackageImports: ['next-intl'],
     },
