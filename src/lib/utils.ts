@@ -46,18 +46,30 @@ export function generateId(prefix = ''): string {
   return prefix ? `${prefix}-${id}` : id;
 }
 
-/** URL for display: GCS (via signed-url proxy when private), /uploads/..., or placeholder when empty. */
+/** URL for display: GCS (via signed-url API with object path), /uploads/..., or placeholder when empty. */
 export const PLACEHOLDER_IMAGE = '/placeholder.svg';
 
-/** GCP Storage host so we can route those URLs through the signed-url API (private buckets). */
 const GCS_HOST = 'https://storage.googleapis.com/';
+
+/** Extract object path from full GCP URL: https://storage.googleapis.com/bucket/uploads/xxx.png → uploads/xxx.png */
+function getGcsObjectPath(fullUrl: string): string | null {
+  if (!fullUrl.startsWith(GCS_HOST)) return null;
+  try {
+    const u = new URL(fullUrl);
+    const segments = u.pathname.replace(/^\/+/, '').split('/');
+    if (segments.length < 2) return null;
+    return segments.slice(1).join('/');
+  } catch {
+    return null;
+  }
+}
 
 export function getImageUrl(url: string | null | undefined): string {
   const u = (url && url.trim()) ? url.trim() : '';
   if (!u) return PLACEHOLDER_IMAGE;
-  // Route GCP Storage URLs through our API to get a signed URL (fixes 403 on private buckets).
-  if (u.startsWith(GCS_HOST)) {
-    return `/api/signed-url?url=${encodeURIComponent(u)}`;
+  const objectPath = getGcsObjectPath(u);
+  if (objectPath) {
+    return `/api/signed-url?object=${encodeURIComponent(objectPath)}&redirect=1`;
   }
   return u;
 }
