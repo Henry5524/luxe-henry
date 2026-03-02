@@ -1,11 +1,9 @@
 /**
  * GCP Cloud Storage: upload, delete, public URL.
  *
- * Auth (in order of precedence):
- * 1. GCP_SERVICE_ACCOUNT_KEY — JSON string or base64 (local, Vercel with key)
- * 2. OIDC — GCP_PROJECT_NUMBER + pool + provider + service account (Vercel Workload Identity)
- * 3. GCP_PROJECT_ID + GCP_SERVICE_ACCOUNT_EMAIL + GCP_PRIVATE_KEY
- * 4. Application Default Credentials (gcloud auth application-default login)
+ * Env vars:
+ *   GCP_BUCKET_NAME          — bucket name
+ *   GCP_SERVICE_ACCOUNT_KEY  — service account JSON (string or base64)
  */
 
 import { Storage } from '@google-cloud/storage';
@@ -13,120 +11,56 @@ import { Storage } from '@google-cloud/storage';
 const BUCKET_NAME = process.env.GCP_BUCKET_NAME;
 const OBJECT_PREFIX = 'uploads/';
 
-// Env aliases (GCP_* and GOOGLE_* for Vercel OIDC)
-const projectId = process.env.GCP_PROJECT_ID ?? process.env.GOOGLE_PROJECT_ID;
-const projectNumber = process.env.GCP_PROJECT_NUMBER ?? process.env.GOOGLE_PROJECT_NUMBER;
-const poolId = process.env.GCP_WORKLOAD_IDENTITY_POOL_ID ?? process.env.GOOGLE_WORKLOAD_IDENTITY_POOL;
-const providerId =
-    process.env.GCP_WORKLOAD_IDENTITY_POOL_PROVIDER_ID ?? process.env.GOOGLE_WORKLOAD_IDENTITY_PROVIDER;
-const serviceAccountEmail =
-    process.env.GCP_SERVICE_ACCOUNT_EMAIL ?? process.env.GOOGLE_SERVICE_ACCOUNT;
-
 type StorageOptions = ConstructorParameters<typeof Storage>[0];
 
-function parseServiceAccountKey(keyJson: string): StorageOptions | null {
+function buildStorageOptions(): StorageOptions {
+    const keyJson = process.env.GCP_SERVICE_ACCOUNT_KEY;
+    if (!keyJson) return {};
+
     try {
         const parsed =
             keyJson.trim().startsWith('{')
                 ? JSON.parse(keyJson)
                 : JSON.parse(Buffer.from(keyJson, 'base64').toString('utf-8'));
+
         if (parsed.client_email && parsed.private_key) {
             return {
                 credentials: {
                     client_email: parsed.client_email,
                     private_key: parsed.private_key.replace(/\\n/g, '\n'),
                 },
-                projectId: parsed.project_id || projectId || undefined,
+                projectId: parsed.project_id || undefined,
             };
         }
     } catch (e) {
         console.error('[gcp-storage] Invalid GCP_SERVICE_ACCOUNT_KEY:', (e as Error).message);
     }
-    return null;
-}
 
-async function getOidcCredentials(): Promise<StorageOptions | null> {
-    if (!projectNumber || !poolId || !providerId || !serviceAccountEmail) return null;
-    try {
-        const mod = '@vercel/oidc';
-        const { getVercelOidcToken } = await import(/* webpackIgnore: true */ mod);
-        return {
-            credentials: {
-                type: 'external_account',
-                audience: `//iam.googleapis.com/projects/${projectNumber}/locations/global/workloadIdentityPools/${poolId}/providers/${providerId}`,
-                subject_token_type: 'urn:ietf:params:oauth:token-type:jwt',
-                token_url: 'https://sts.googleapis.com/v1/token',
-                service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${serviceAccountEmail}:generateAccessToken`,
-                subject_token_supplier: {
-                    getSubjectToken: () => getVercelOidcToken(),
-                },
-            },
-            projectId: projectId ?? undefined,
-        };
-    } catch (e) {
-        console.error('[gcp-storage] OIDC setup failed:', (e as Error).message);
-        return null;
-    }
-}
-
-function getStorageOptionsSync(): StorageOptions {
-    // 1. JSON key (most common for local + Vercel with key)
-    const keyJson = process.env.GCP_SERVICE_ACCOUNT_KEY;
-    if (keyJson) {
-        const opts = parseServiceAccountKey(keyJson);
-        if (opts) return opts;
-    }
-
-    // 2. Separate vars
-    const email = process.env.GCP_SERVICE_ACCOUNT_EMAIL;
-    const privateKey = process.env.GCP_PRIVATE_KEY;
-    if (email && privateKey && projectId) {
-        return {
-            credentials: {
-                client_email: email,
-                private_key: privateKey.replace(/\\n/g, '\n'),
-            },
-            projectId,
-        };
-    }
-
-    // 3. ADC (gcloud auth application-default login or GOOGLE_APPLICATION_CREDENTIALS)
     return {};
 }
 
 let storageInstance: Storage | null = null;
-let storageInitPromise: Promise<Storage | null> | null = null;
 
-async function getStorage(): Promise<Storage | null> {
+function getStorage(): Storage | null {
     if (!BUCKET_NAME) return null;
-
     if (storageInstance) return storageInstance;
 
-    if (storageInitPromise) return storageInitPromise;
-
-    storageInitPromise = (async () => {
-        // Try OIDC first (async)
-        const oidcOpts = await getOidcCredentials();
-        const opts = oidcOpts ?? getStorageOptionsSync() ?? {};
-        const authMethod = oidcOpts ? 'OIDC' : (opts.credentials ? 'service-account-key' : 'ADC');
-        console.log(`[gcp-storage] Initialised with auth="${authMethod}", bucket="${BUCKET_NAME}"`);
-        storageInstance = new Storage(opts);
-        return storageInstance;
-    })();
-
-    return storageInitPromise;
+    const opts = buildStorageOptions();
+    const authMethod = opts?.credentials ? 'service-account-key' : 'ADC';
+    console.log(`[gcp-storage] Initialised with auth="${authMethod}", bucket="${BUCKET_NAME}"`);
+    storageInstance = new Storage(opts);
+    return storageInstance;
 }
 
 /**
  * Upload buffer to GCP. Returns public URL or throws on failure.
- * The caller (upload route) is responsible for catching and falling back.
  */
 export async function uploadToGcp(
     buffer: Buffer,
     filename: string,
     contentType: string
 ): Promise<string | null> {
-    const storage = await getStorage();
+    const storage = getStorage();
     if (!storage) return null;
 
     const bucket = storage.bucket(BUCKET_NAME!);
@@ -143,11 +77,11 @@ export async function uploadToGcp(
         const code = (err as { code?: number }).code;
         if (code === 403) {
             console.error(
-                `[gcp-storage] 403 Forbidden — the service account does not have permission on bucket "${BUCKET_NAME}".\n` +
-                `  → Fix in GCP Console: grant "Storage Object Admin" role to the service account on this bucket.`
+                `[gcp-storage] 403 Forbidden — service account lacks permission on bucket "${BUCKET_NAME}".\n` +
+                `  → Fix: grant "Storage Object Admin" role in GCP Console.`
             );
         }
-        throw err; // re-throw so the upload route can catch and fall back to local
+        throw err;
     }
 
     return getPublicUrl(objectName);
@@ -155,11 +89,9 @@ export async function uploadToGcp(
 
 /**
  * Delete object by path or full URL.
- * - "uploads/123.jpg" or "https://storage.googleapis.com/bucket/uploads/123.jpg"
- * - Local "/uploads/..." returns false (handled by upload API).
  */
 export async function deleteFromGcp(pathOrUrl: string): Promise<boolean> {
-    const storage = await getStorage();
+    const storage = getStorage();
     if (!storage) return false;
     if (!pathOrUrl.startsWith('http') && pathOrUrl.startsWith('/uploads/')) return false;
 
@@ -191,7 +123,7 @@ export async function deleteFromGcp(pathOrUrl: string): Promise<boolean> {
 }
 
 /**
- * Public URL for object. Bucket must be public or use signed URLs.
+ * Public URL for object.
  */
 export function getPublicUrl(objectName: string): string {
     if (!BUCKET_NAME) return '';
