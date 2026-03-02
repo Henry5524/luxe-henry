@@ -7,10 +7,10 @@ const nextConfig = {
     images: {
         remotePatterns: [{ protocol: 'https', hostname: '**' }],
     },
-    // Don't bundle GCP Storage into serverless — use runtime copy (smaller deploy, fewer "internal error" on Vercel)
-    serverExternalPackages: ['@google-cloud/storage'],
     experimental: {
         optimizePackageImports: ['next-intl'],
+        // Don't bundle GCP Storage into serverless (smaller deploy, fewer "internal error" on Vercel)
+        serverComponentsExternalPackages: ['@google-cloud/storage'],
     },
     async redirects() {
         return [

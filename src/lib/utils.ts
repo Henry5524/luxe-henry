@@ -46,30 +46,9 @@ export function generateId(prefix = ''): string {
   return prefix ? `${prefix}-${id}` : id;
 }
 
-/** URL for display: GCS (via signed-url API with object path), /uploads/..., or placeholder when empty. */
+/** URL for display: GCS, /uploads/..., or placeholder when empty. */
 export const PLACEHOLDER_IMAGE = '/placeholder.svg';
 
-const GCS_HOST = 'https://storage.googleapis.com/';
-
-/** Extract object path from full GCP URL: https://storage.googleapis.com/bucket/uploads/xxx.png → uploads/xxx.png */
-function getGcsObjectPath(fullUrl: string): string | null {
-  if (!fullUrl.startsWith(GCS_HOST)) return null;
-  try {
-    const u = new URL(fullUrl);
-    const segments = u.pathname.replace(/^\/+/, '').split('/');
-    if (segments.length < 2) return null;
-    return segments.slice(1).join('/');
-  } catch {
-    return null;
-  }
-}
-
 export function getImageUrl(url: string | null | undefined): string {
-  const u = (url && url.trim()) ? url.trim() : '';
-  if (!u) return PLACEHOLDER_IMAGE;
-  const objectPath = getGcsObjectPath(u);
-  if (objectPath) {
-    return `/api/signed-url?object=${encodeURIComponent(objectPath)}&redirect=1`;
-  }
-  return u;
+  return (url && url.trim()) ? url.trim() : PLACEHOLDER_IMAGE;
 }
