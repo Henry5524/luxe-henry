@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { localize } from '@/lib/utils';
+import { localize, getImageUrl } from '@/lib/utils';
 import type { Category } from '@/db/schema';
 
 interface CategoryCardProps {
@@ -27,7 +27,7 @@ export function CategoryCard({ category, index = 0, locale }: CategoryCardProps)
             >
                 <div className="aspect-[3/4] overflow-hidden">
                     <img
-                        src={category.imageUrl}
+                        src={getImageUrl(category.imageUrl)}
                         alt={localize(category.name, locale)}
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"

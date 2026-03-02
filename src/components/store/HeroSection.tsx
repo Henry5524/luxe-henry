@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
-import { localize } from '@/lib/utils';
+import { localize, getImageUrl } from '@/lib/utils';
 import type { StoreConfig } from '@/db/schema';
 
 interface HeroSectionProps {
@@ -20,7 +20,7 @@ export function HeroSection({ hero, locale }: HeroSectionProps) {
         <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-gradient-hero">
             <div className="absolute inset-0">
                 <img
-                    src={hero.heroImageUrl}
+                    src={getImageUrl(hero.heroImageUrl)}
                     alt="Hero"
                     className="h-full w-full object-cover opacity-60"
                 />

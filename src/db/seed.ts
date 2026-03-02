@@ -1,5 +1,8 @@
 // Seed script - run with: npm run db:seed
 // NOTE: Run AFTER db:push or db:migrate
+import 'dotenv/config';
+import { config } from 'dotenv';
+config({ path: '.env.local' });
 
 import postgres from 'postgres';
 import { drizzle } from 'drizzle-orm/postgres-js';

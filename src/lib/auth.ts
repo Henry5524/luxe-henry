@@ -1,9 +1,5 @@
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-import bcrypt from 'bcryptjs';
-import { db } from '@/db';
-import { admins } from '@/db/schema';
-import { eq } from 'drizzle-orm';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
@@ -27,7 +23,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     return { id: '0', email, name: 'Admin' };
                 }
 
-                // Check DB-based admins
+                // Dynamic imports so middleware (Edge) never bundles Node-only db/bcrypt
+                const { db } = await import('@/db');
+                const { admins } = await import('@/db/schema');
+                const { eq } = await import('drizzle-orm');
+
                 const [admin] = await db
                     .select()
                     .from(admins)
@@ -36,6 +36,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
                 if (!admin) return null;
 
+                const bcrypt = (await import('bcryptjs')).default;
                 const valid = await bcrypt.compare(password, admin.passwordHash);
                 if (!valid) return null;
 

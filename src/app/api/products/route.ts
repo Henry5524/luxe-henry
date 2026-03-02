@@ -4,6 +4,8 @@ import { products, categories } from '@/db/schema';
 import { and, eq, inArray, asc, desc, count, sql } from 'drizzle-orm';
 import { localize } from '@/lib/utils';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
     try {
         const { searchParams } = request.nextUrl;

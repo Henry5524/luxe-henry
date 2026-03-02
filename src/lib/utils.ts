@@ -45,3 +45,10 @@ export function generateId(prefix = ''): string {
   const id = Math.random().toString(36).substring(2, 9);
   return prefix ? `${prefix}-${id}` : id;
 }
+
+/** URL for display: GCS, /uploads/..., or placeholder when empty. */
+export const PLACEHOLDER_IMAGE = '/placeholder.svg';
+
+export function getImageUrl(url: string | null | undefined): string {
+  return (url && url.trim()) ? url.trim() : PLACEHOLDER_IMAGE;
+}

@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 import { useFavorites } from '@/hooks/use-favorites';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { formatPrice, localize } from '@/lib/utils';
+import { formatPrice, localize, getImageUrl } from '@/lib/utils';
 import { Link } from '@/i18n/routing';
 import { useTranslations, useLocale } from 'next-intl';
 import type { Product } from '@/db/schema';
@@ -88,7 +88,7 @@ export function FavoritesModal({ open, onClose }: FavoritesModalProps) {
                                                 <div key={product.id} className="flex gap-4 rounded-sm border border-border p-3">
                                                     <Link href={`/product/${product.slug}`} onClick={onClose} className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-sm bg-muted">
                                                         <img
-                                                            src={(product.images as string[])[0] ?? '/uploads/placeholder.jpg'}
+                                                            src={getImageUrl((product.images as string[])?.[0])}
                                                             alt={name}
                                                             className="h-full w-full object-cover"
                                                         />

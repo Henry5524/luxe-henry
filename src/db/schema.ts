@@ -33,7 +33,7 @@ export const categories = pgTable('categories', {
     id: varchar('id', { length: 100 }).primaryKey(),
     name: jsonb('name').$type<LocalizedField>().notNull().default({ en: '', uz: '', ru: '' }),
     slug: varchar('slug', { length: 255 }).notNull().unique(),
-    imageUrl: text('image_url').notNull().default('/uploads/placeholder.jpg'),
+    imageUrl: text('image_url').notNull().default('/placeholder.svg'),
     parentId: varchar('parent_id', { length: 100 }),
     sortOrder: integer('sort_order').notNull().default(0),
 });
