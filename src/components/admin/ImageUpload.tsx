@@ -15,10 +15,17 @@ export function ImageUpload({ value, onChange }: ImageUploadProps) {
         setUploading(true);
         const fd = new FormData();
         fd.append('file', file);
+        const previousUrl = value;
         try {
             const res = await fetch('/api/admin/upload', { method: 'POST', body: fd });
             const data = await res.json();
-            if (data.url) onChange(data.url);
+            if (data.url) {
+                if (previousUrl && previousUrl.startsWith('http')) {
+                    const { deleteUploadedImage } = await import('@/lib/upload');
+                    deleteUploadedImage(previousUrl);
+                }
+                onChange(data.url);
+            }
         } catch {
             alert('Upload failed');
         } finally {

@@ -102,7 +102,12 @@ export function ProductForm({ product, categories, brands }: ProductFormProps) {
         });
     }
 
-    function removeImage(index: number) {
+    async function removeImage(index: number) {
+        const url = form.images[index];
+        if (url && (url.startsWith('http') || url.startsWith('/uploads/'))) {
+            const { deleteUploadedImage } = await import('@/lib/upload');
+            deleteUploadedImage(url);
+        }
         setForm((f) => ({ ...f, images: f.images.filter((_, i) => i !== index) }));
     }
 

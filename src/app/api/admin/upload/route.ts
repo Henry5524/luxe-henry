@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { auth } from '@/lib/auth';
+import { uploadToGcp, deleteFromGcp, isGcpUploadEnabled } from '@/lib/gcp-storage';
 
 export async function POST(request: NextRequest) {
     const session = await auth();
@@ -29,18 +30,44 @@ export async function POST(request: NextRequest) {
 
         const bytes = await file.arrayBuffer();
         const buffer = Buffer.from(bytes);
-
-        // Sanitize and save filename
         const ext = file.name.split('.').pop() ?? 'jpg';
         const filename = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}.${ext}`;
-        const uploadDir = join(process.cwd(), 'public', 'uploads');
 
+        if (isGcpUploadEnabled()) {
+            const url = await uploadToGcp(buffer, filename, file.type);
+            if (url) {
+                return NextResponse.json({ url });
+            }
+        }
+
+        // Fallback: local disk
+        const uploadDir = join(process.cwd(), 'public', 'uploads');
         await mkdir(uploadDir, { recursive: true });
         await writeFile(join(uploadDir, filename), buffer);
-
         return NextResponse.json({ url: `/uploads/${filename}` });
     } catch (error) {
         console.error('[upload POST]', error);
         return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
+    }
+}
+
+/** Delete file from GCP bucket by URL. No-op if GCP not used or URL not from our bucket. */
+export async function DELETE(request: NextRequest) {
+    const session = await auth();
+    if (!session?.user) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    try {
+        const body = await request.json().catch(() => ({}));
+        const url = typeof body?.url === 'string' ? body.url.trim() : '';
+        if (!url) {
+            return NextResponse.json({ error: 'Missing url' }, { status: 400 });
+        }
+        await deleteFromGcp(url);
+        return NextResponse.json({ ok: true });
+    } catch (error) {
+        console.error('[upload DELETE]', error);
+        return NextResponse.json({ error: 'Delete failed' }, { status: 500 });
     }
 }
