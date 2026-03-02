@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import { useFavorites } from '@/hooks/use-favorites';
-import { formatPrice, localize } from '@/lib/utils';
+import { formatPrice, localize, getImageUrl } from '@/lib/utils';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import type { Product } from '@/db/schema';
@@ -34,7 +34,7 @@ export function ProductCard({ product, index = 0, currency = 'USD', locale = 'en
             <Link href={`/product/${product.slug}`} className="block overflow-hidden rounded-sm bg-muted">
                 <div className="aspect-square overflow-hidden">
                     <img
-                        src={(product.images as string[])[0] ?? '/uploads/placeholder.jpg'}
+                        src={getImageUrl((product.images as string[])?.[0])}
                         alt={name}
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"

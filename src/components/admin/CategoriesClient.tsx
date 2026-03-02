@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Pencil, Trash2, Plus, X, ChevronRight } from 'lucide-react';
 import { ImageUpload } from './ImageUpload';
-import { generateSlug, localize, emptyLocalized } from '@/lib/utils';
+import { generateSlug, localize, emptyLocalized, getImageUrl, PLACEHOLDER_IMAGE } from '@/lib/utils';
 import type { LocalizedField } from '@/lib/utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useTranslations } from 'next-intl';
@@ -75,7 +75,7 @@ export function CategoriesClient({ initialCategories }: CategoriesClientProps) {
             const payload = {
                 name: form.name,
                 slug: form.slug || generateSlug(form.name.en),
-                imageUrl: form.imageUrl || '/uploads/placeholder.jpg',
+                imageUrl: form.imageUrl || PLACEHOLDER_IMAGE,
                 parentId: form.parentId || null,
                 sortOrder: form.sortOrder,
             };
@@ -135,7 +135,7 @@ export function CategoriesClient({ initialCategories }: CategoriesClientProps) {
                             <div key={cat.id} className="rounded-lg border border-border bg-card">
                                 <div className="flex items-center justify-between px-6 py-4">
                                     <div className="flex items-center gap-3">
-                                        <img src={cat.imageUrl} alt={localize(cat.name, 'en')} className="h-10 w-10 rounded-sm object-cover" />
+                                        <img src={getImageUrl(cat.imageUrl)} alt={localize(cat.name, 'en')} className="h-10 w-10 rounded-sm object-cover" />
                                         <div>
                                             <p className="text-sm font-medium text-foreground">{localize(cat.name, 'en')}</p>
                                             {children.length > 0 && (

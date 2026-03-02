@@ -10,7 +10,7 @@
     "db:generate": "node --env-file=.env.local ./node_modules/.bin/drizzle-kit generate",
     "db:migrate": "node --env-file=.env.local ./node_modules/.bin/drizzle-kit migrate",
     "db:push": "node --env-file=.env.local ./node_modules/.bin/drizzle-kit push",
-    "db:seed": "node --env-file=.env.local -r @swc-node/register src/db/seed.ts",
+    "db:seed": "tsx src/db/seed.ts",
     "db:studio": "node --env-file=.env.local ./node_modules/.bin/drizzle-kit studio"
   },
   "dependencies": {
@@ -45,6 +45,7 @@
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@tanstack/react-query": "^5.83.0",
+    "baseline-browser-mapping": "^2.10.0",
     "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -74,6 +75,9 @@
     "zod": "^3.25.76",
     "zustand": "^5.0.11"
   },
+  "overrides": {
+    "caniuse-lite": "^1.0.30001775"
+  },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@tailwindcss/typography": "^0.5.16",
@@ -82,10 +86,13 @@
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
+    "caniuse-lite": "^1.0.30001775",
+    "dotenv": "^16.6.1",
     "eslint": "^9.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0"
   }

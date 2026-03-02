@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Pencil, Trash2, Search } from 'lucide-react';
-import { formatPrice, localize } from '@/lib/utils';
+import { formatPrice, localize, getImageUrl } from '@/lib/utils';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter } from '@/i18n/routing';
 import type { Product } from '@/db/schema';
@@ -78,17 +78,13 @@ export function ProductsClient({ initialProducts }: ProductsClientProps) {
                         )}
                         {filtered.map((product) => {
                             const price = parseFloat(product.price as unknown as string);
-                            const image = (product.images as string[])?.[0];
+                            const imageUrl = getImageUrl((product.images as string[])?.[0]);
                             const name = localize(product.name, 'en');
                             return (
                                 <tr key={product.id} className="border-b border-border last:border-b-0 hover:bg-muted/30">
                                     <td className="px-6 py-4">
                                         <div className="flex items-center gap-3">
-                                            {image ? (
-                                                <img src={image} alt={name} className="h-10 w-10 rounded-sm object-cover" />
-                                            ) : (
-                                                <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-muted text-xs text-muted-foreground">N/A</div>
-                                            )}
+                                            <img src={imageUrl} alt={name} className="h-10 w-10 rounded-sm object-cover" />
                                             <div>
                                                 <p className="text-sm font-medium text-foreground">{name}</p>
                                                 <p className="text-xs text-muted-foreground">/{product.slug}</p>

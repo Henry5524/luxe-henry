@@ -1,6 +1,6 @@
 import createIntlMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
-import { auth } from '@/lib/auth';
+import { auth } from '@/lib/auth-middleware';
 import { NextResponse } from 'next/server';
 
 const intlMiddleware = createIntlMiddleware(routing);

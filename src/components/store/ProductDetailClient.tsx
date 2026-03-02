@@ -3,7 +3,7 @@
 import { Heart, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useFavorites } from '@/hooks/use-favorites';
-import { formatPrice, localize } from '@/lib/utils';
+import { formatPrice, localize, getImageUrl } from '@/lib/utils';
 import { ProductCard } from './ProductCard';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
@@ -70,7 +70,7 @@ export function ProductDetailClient({
                     className="overflow-hidden rounded-sm bg-muted"
                 >
                     <img
-                        src={(product.images as string[])[0] ?? '/uploads/placeholder.jpg'}
+                        src={getImageUrl((product.images as string[])?.[0])}
                         alt={name}
                         className="h-full w-full object-cover"
                     />
