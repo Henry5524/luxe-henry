@@ -26,3 +26,7 @@ dist-ssr
 .next
 .env
 .env.local
+
+# GCP service account key (never commit)
+gcp-key.json
+*-service-account*.json

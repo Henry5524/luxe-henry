@@ -60,6 +60,46 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## GCP Cloud Storage (image uploads)
+
+Bucket: **preview_55**, Project: **luxe-website-489006**
+
+В организации может быть включена политика **iam.disableServiceAccountKeyCreation** — создание ключей сервисного аккаунта запрещено. Используй **Application Default Credentials** (без JSON-ключа).
+
+### 1. Локальная разработка (без ключа)
+
+1. Установи [Google Cloud SDK (gcloud)](https://cloud.google.com/sdk/docs/install).
+2. В терминале выполни:
+   ```bash
+   gcloud auth application-default login
+   ```
+   Войди в аккаунт Google с доступом к проекту **luxe-website-489006** и bucket **preview_55**.
+3. Убедись, что выбран нужный проект:
+   ```bash
+   gcloud config set project luxe-website-489006
+   ```
+4. В **`.env.local`** укажи только bucket (путь к ключу не нужен):
+   ```env
+   GCP_BUCKET_NAME="preview_55"
+   ```
+   Переменную `GOOGLE_APPLICATION_CREDENTIALS` не задавай — библиотека возьмёт учётные данные из `gcloud auth application-default login`.
+
+Твой пользовательский аккаунт должен иметь права на запись в bucket (например роль **Storage Object Admin** на проект или на bucket).
+
+### 2. Прод (деплой на сервере)
+
+- **Если приложение крутится на GCP** (Cloud Run, GKE, GCE): привяжи к сервису Service Account с ролью **Storage Object Admin** — ключ не нужен, используются встроенные учётные данные.
+- **Если деплой не на GCP** (Vercel, свой VPS и т.д.): без ключа варианты — [Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation) (OIDC) или запрос к администратору организации на снятие ограничения `iam.disableServiceAccountKeyCreation` для создания одного ключа (хранить в секретах окружения).
+
+### 3. Публичный доступ к картинкам
+
+Сейчас bucket **Not public**. Чтобы ссылки на картинки открывались без подписи:
+
+- **Вариант A:** [Bucket → Permissions](https://console.cloud.google.com/storage/browser/preview_55?project=luxe-website-489006) → Add principal → `allUsers` → роль **Storage Object Viewer** (публичное чтение).
+- **Вариант B:** оставить bucket приватным и позже включить в коде [signed URLs](https://cloud.google.com/storage/docs/access-control/signed-urls).
+
+После этого загрузка/удаление в админке будут идти в bucket **preview_55**.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
