@@ -46,9 +46,18 @@ export function generateId(prefix = ''): string {
   return prefix ? `${prefix}-${id}` : id;
 }
 
-/** URL for display: GCS, /uploads/..., or placeholder when empty. */
+/** URL for display: GCS (via signed-url proxy when private), /uploads/..., or placeholder when empty. */
 export const PLACEHOLDER_IMAGE = '/placeholder.svg';
 
+/** GCP Storage host so we can route those URLs through the signed-url API (private buckets). */
+const GCS_HOST = 'https://storage.googleapis.com/';
+
 export function getImageUrl(url: string | null | undefined): string {
-  return (url && url.trim()) ? url.trim() : PLACEHOLDER_IMAGE;
+  const u = (url && url.trim()) ? url.trim() : '';
+  if (!u) return PLACEHOLDER_IMAGE;
+  // Route GCP Storage URLs through our API to get a signed URL (fixes 403 on private buckets).
+  if (u.startsWith(GCS_HOST)) {
+    return `/api/signed-url?url=${encodeURIComponent(u)}`;
+  }
+  return u;
 }
