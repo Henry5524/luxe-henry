@@ -154,13 +154,65 @@ export async function deleteFromGcp(pathOrUrl: string): Promise<boolean> {
 }
 
 /**
- * Public URL for an object. Bucket must be public or use signed URLs later.
+ * Public URL for an object. Bucket must be public or use signed URLs for private buckets.
  */
 export function getPublicUrl(objectName: string): string {
     if (!bucketName) return '';
     const base = `https://storage.googleapis.com/${bucketName}`;
     const path = objectName.startsWith('/') ? objectName.slice(1) : objectName;
     return `${base}/${path}`;
+}
+
+/** Default expiry for signed URLs (1 hour). */
+const SIGNED_URL_EXPIRY_MINUTES = 60;
+
+/**
+ * Get a signed read URL for an object. Use when the bucket is private.
+ * @param pathOrUrl - Object path (e.g. "uploads/xxx.png") or full GCP URL
+ * @returns Signed URL or null if not configured / invalid
+ */
+export async function getSignedUrl(pathOrUrl: string): Promise<string | null> {
+    const bucket = getBucket();
+    if (!bucket) return null;
+
+    let objectName = pathOrUrl;
+    if (pathOrUrl.startsWith('http')) {
+        try {
+            const url = new URL(pathOrUrl);
+            const pathname = url.pathname.replace(/^\/+/, '');
+            const prefix = `${bucketName}/`;
+            if (!pathname.startsWith(prefix)) return null;
+            objectName = pathname.slice(prefix.length);
+        } catch {
+            return null;
+        }
+    } else if (objectName.startsWith('/')) {
+        objectName = objectName.replace(/^\/+/, '');
+    }
+    if (!objectName) return null;
+
+    try {
+        const [signedUrl] = await bucket.file(objectName).getSignedUrl({
+            version: 'v4',
+            action: 'read',
+            expires: Date.now() + SIGNED_URL_EXPIRY_MINUTES * 60 * 1000,
+        });
+        return signedUrl;
+    } catch (err) {
+        console.error('[gcp-storage] getSignedUrl failed:', err);
+        return null;
+    }
+}
+
+/** Whether the given URL is from our GCP bucket (for using signed URL proxy). */
+export function isGcpBucketUrl(url: string): boolean {
+    if (!bucketName || !url?.startsWith('http')) return false;
+    try {
+        const u = new URL(url);
+        return u.hostname === 'storage.googleapis.com' && u.pathname.startsWith(`/${bucketName}/`);
+    } catch {
+        return false;
+    }
 }
 
 /** Whether GCP upload is enabled (bucket name set). */
