@@ -48,7 +48,8 @@ function parseServiceAccountKey(keyJson: string): StorageOptions | null {
 async function getOidcCredentials(): Promise<StorageOptions | null> {
     if (!projectNumber || !poolId || !providerId || !serviceAccountEmail) return null;
     try {
-        const { getVercelOidcToken } = await import(/* webpackIgnore: true */ '@vercel/oidc');
+        const mod = '@vercel/oidc';
+        const { getVercelOidcToken } = await import(/* webpackIgnore: true */ mod);
         return {
             credentials: {
                 type: 'external_account',
