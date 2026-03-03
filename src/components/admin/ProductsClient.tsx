@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Pencil, Trash2, Search } from 'lucide-react';
+import { Pencil, Trash2, Search, Upload, Download, Loader2 } from 'lucide-react';
+import { BulkImportModal } from './BulkImportModal';
 import { formatPrice, localize, getImageUrl } from '@/lib/utils';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter } from '@/i18n/routing';
@@ -17,6 +18,9 @@ export function ProductsClient({ initialProducts }: ProductsClientProps) {
     const locale = useLocale();
     const [products, setProducts] = useState(initialProducts);
     const [search, setSearch] = useState('');
+    const [importOpen, setImportOpen] = useState(false);
+    const [exportingCSV, setExportingCSV] = useState(false);
+    const [exportingJSON, setExportingJSON] = useState(false);
 
     const filtered = search.trim()
         ? products.filter((p) => {
@@ -35,9 +39,25 @@ export function ProductsClient({ initialProducts }: ProductsClientProps) {
         }
     }
 
+    async function handleExport(format: 'csv' | 'json') {
+        const setter = format === 'csv' ? setExportingCSV : setExportingJSON;
+        setter(true);
+        try {
+            const res = await fetch(`/api/admin/import/export?type=products&format=${format}`);
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `products-export.${format}`;
+            a.click();
+            URL.revokeObjectURL(url);
+        } catch { alert('Export failed'); }
+        finally { setter(false); }
+    }
+
     return (
         <div>
-            <div className="mb-4 flex items-center gap-3">
+            <div className="mb-4 flex flex-wrap items-center gap-3">
                 <div className="relative flex-1">
                     <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                     <input
@@ -48,7 +68,26 @@ export function ProductsClient({ initialProducts }: ProductsClientProps) {
                         className="w-full rounded-sm border border-border bg-background py-2 pl-10 pr-4 text-sm outline-none focus:ring-1 focus:ring-ring"
                     />
                 </div>
+                <button onClick={() => handleExport('csv')} disabled={exportingCSV}
+                    className="flex items-center gap-1 rounded-sm border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted disabled:opacity-60">
+                    {exportingCSV ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />} {t('exportCSV')}
+                </button>
+                <button onClick={() => handleExport('json')} disabled={exportingJSON}
+                    className="flex items-center gap-1 rounded-sm border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted disabled:opacity-60">
+                    {exportingJSON ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />} {t('exportJSON')}
+                </button>
+                <button onClick={() => setImportOpen(true)}
+                    className="flex items-center gap-1 rounded-sm border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">
+                    <Upload className="h-4 w-4" /> {t('import')}
+                </button>
             </div>
+
+            <BulkImportModal
+                open={importOpen}
+                onOpenChange={setImportOpen}
+                entityType="products"
+                onImportComplete={() => { router.refresh(); window.location.reload(); }}
+            />
 
             <div className="overflow-hidden rounded-lg border border-border bg-card">
                 <table className="w-full">

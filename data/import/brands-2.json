@@ -1,0 +1,77 @@
+[
+  {
+    "id": "byredo",
+    "name": { "en": "Byredo", "uz": "Byredo", "ru": "Байредо" },
+    "slug": "byredo"
+  },
+  {
+    "id": "diptyque",
+    "name": { "en": "Diptyque", "uz": "Diptyque", "ru": "Диптик" },
+    "slug": "diptyque"
+  },
+  {
+    "id": "penhaligons",
+    "name": { "en": "Penhaligon's", "uz": "Penhaligon's", "ru": "Пенхалигонс" },
+    "slug": "penhaligons"
+  },
+  {
+    "id": "acqua-di-parma",
+    "name": { "en": "Acqua di Parma", "uz": "Acqua di Parma", "ru": "Аква ди Парма" },
+    "slug": "acqua-di-parma"
+  },
+  {
+    "id": "initio",
+    "name": { "en": "Initio Parfums Privés", "uz": "Initio Parfums Privés", "ru": "Инитио Парфюмс Приве" },
+    "slug": "initio"
+  },
+  {
+    "id": "xerjoff",
+    "name": { "en": "Xerjoff", "uz": "Xerjoff", "ru": "Ксерджофф" },
+    "slug": "xerjoff"
+  },
+  {
+    "id": "al-haramain",
+    "name": { "en": "Al Haramain", "uz": "Al Haramain", "ru": "Аль Харамайн" },
+    "slug": "al-haramain"
+  },
+  {
+    "id": "ahmed-al-maghribi",
+    "name": { "en": "Ahmed Al Maghribi", "uz": "Ahmad Al Mag'ribiy", "ru": "Ахмед Аль Магриби" },
+    "slug": "ahmed-al-maghribi"
+  },
+  {
+    "id": "swiss-arabian",
+    "name": { "en": "Swiss Arabian", "uz": "Swiss Arabian", "ru": "Свисс Арабиан" },
+    "slug": "swiss-arabian"
+  },
+  {
+    "id": "ajmal",
+    "name": { "en": "Ajmal", "uz": "Ajmal", "ru": "Аджмал" },
+    "slug": "ajmal"
+  },
+  {
+    "id": "memo-paris",
+    "name": { "en": "Memo Paris", "uz": "Memo Paris", "ru": "Мемо Париж" },
+    "slug": "memo-paris"
+  },
+  {
+    "id": "tiziana-terenzi",
+    "name": { "en": "Tiziana Terenzi", "uz": "Tiziana Terenzi", "ru": "Тициана Терензи" },
+    "slug": "tiziana-terenzi"
+  },
+  {
+    "id": "nishane",
+    "name": { "en": "Nishane", "uz": "Nishane", "ru": "Нишане" },
+    "slug": "nishane"
+  },
+  {
+    "id": "attar-collection",
+    "name": { "en": "Attar Collection", "uz": "Attar Collection", "ru": "Аттар Коллекшн" },
+    "slug": "attar-collection"
+  },
+  {
+    "id": "rasasi",
+    "name": { "en": "Rasasi", "uz": "Rasasi", "ru": "Расаси" },
+    "slug": "rasasi"
+  }
+]

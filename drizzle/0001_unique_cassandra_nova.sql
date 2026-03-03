@@ -1,0 +1,1 @@
+ALTER TABLE "categories" ALTER COLUMN "image_url" SET DEFAULT '/placeholder.svg';

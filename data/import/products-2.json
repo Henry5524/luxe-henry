@@ -1,0 +1,363 @@
+[
+  {
+    "id": "byredo-gypsy-water",
+    "name": { "en": "Byredo Gypsy Water", "uz": "Byredo Gypsy Water", "ru": "Byredo Gypsy Water" },
+    "slug": "byredo-gypsy-water",
+    "description": {
+      "en": "A romanticised vision of the Romani lifestyle — freedom, travel and folklore. Bergamot, lemon and pepper open into a heart of incense, pine needle and orris, settling into a warm base of sandalwood, amber and vanilla.",
+      "uz": "Rim turmush tarzining romantik ko'rinishi — erkinlik, sayohat va folklor. Bergamot, limon va qalampir tutatqi, qarag'ay ignasi va iris yuragiga ochiladi, sandal, ambar va vanil issiq bazasiga joylashadi.",
+      "ru": "Романтизированное видение цыганского образа жизни — свобода, путешествия и фольклор. Бергамот, лимон и перец раскрываются в сердце из ладана, сосновой хвои и ириса, переходя в тёплую базу сандала, амбры и ванили."
+    },
+    "price": "230",
+    "compareAtPrice": "280",
+    "images": ["https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800", "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "edp-woody",
+    "brandId": "byredo",
+    "material": { "en": "Eau de Parfum, 50ml", "uz": "Parfyum suvi, 50ml", "ru": "Парфюмерная вода, 50мл" },
+    "weight": "50ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "byredo-blanche",
+    "name": { "en": "Byredo Blanche", "uz": "Byredo Blanche", "ru": "Byredo Blanche" },
+    "slug": "byredo-blanche",
+    "description": {
+      "en": "An ode to the colour white — purity, simplicity and calm. Aldehyde and pink pepper sparkle over a bouquet of violet, peony and neroli, finished with blonde woods, sandalwood and musk. Ethereal and luminous.",
+      "uz": "Oq rangga bag'ishlangan qasida — poklik, soddalik va xotirjamlik. Aldegid va pushti qalampir binafsha, pion va neroli buketida porlaydi, oq yog'ochlar, sandal va mushk bilan yakunlanadi. Havorang va nurli.",
+      "ru": "Ода белому цвету — чистота, простота и покой. Альдегид и розовый перец сверкают над букетом фиалки, пиона и нероли, завершаясь светлым деревом, сандалом и мускусом. Воздушный и сияющий."
+    },
+    "price": "320",
+    "compareAtPrice": "385",
+    "images": ["https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "edp-floral",
+    "brandId": "byredo",
+    "material": { "en": "Absolu de Parfum, 100ml", "uz": "Absolyu de Parfyum, 100ml", "ru": "Абсолю де Парфюм, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "diptyque-philosykos",
+    "name": { "en": "Diptyque Philosykos", "uz": "Diptyque Philosykos", "ru": "Diptyque Philosykos" },
+    "slug": "diptyque-philosykos",
+    "description": {
+      "en": "The lover of figs — a green, woody scent that captures the entire fig tree: fruit, leaves and bark. Fresh fig leaf and green notes open into a milky fig heart, grounded by white cedar and coconut. Mediterranean summer in a bottle.",
+      "uz": "Anjir ishqibozi — butun anjir daraxtini ushlab turadigan yashil, yog'ochli hid: meva, barglar va po'stloq. Yangi anjir barglari va yashil notalar sut anjir yuragiga ochiladi, oq sadr va kokos bilan mustahkamlangan.",
+      "ru": "Любитель фиги — зелёный, древесный аромат, передающий всё фиговое дерево: плод, листья и кору. Свежий фиговый лист раскрывается в молочном инжирном сердце на базе белого кедра и кокоса. Средиземноморское лето во флаконе."
+    },
+    "price": "175",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800"],
+    "categoryId": "edt-fresh",
+    "brandId": "diptyque",
+    "material": { "en": "Eau de Toilette, 100ml", "uz": "Tualat suvi, 100ml", "ru": "Туалетная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "diptyque-tam-dao",
+    "name": { "en": "Diptyque Tam Dao", "uz": "Diptyque Tam Dao", "ru": "Diptyque Tam Dao" },
+    "slug": "diptyque-tam-dao",
+    "description": {
+      "en": "Named after the mountain range in northern Vietnam, Tam Dao is a meditation in sandalwood. Italian cypress, myrtle and rose envelope a creamy sandalwood core, enriched with cedar and white musk. Serene and deeply calming.",
+      "uz": "Shimoliy Vyetnamdagi tog' tizmasi nomi bilan atalgan Tam Dao sandal meditatsiyasidir. Italiya sarvi, mirt va atirgul kremli sandal yadrosini o'rab oladi, sadr va oq muskus bilan boyitilgan. Tinch va chuqur tinchlantiruvchi.",
+      "ru": "Названный в честь горного хребта на севере Вьетнама, Tam Dao — медитация в сандале. Итальянский кипарис, мирт и роза обволакивают кремовое сандаловое ядро, обогащённое кедром и белым мускусом. Умиротворяющий."
+    },
+    "price": "195",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "edp-woody",
+    "brandId": "diptyque",
+    "material": { "en": "Eau de Parfum, 75ml", "uz": "Parfyum suvi, 75ml", "ru": "Парфюмерная вода, 75мл" },
+    "weight": "75ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "penhaligons-halfeti",
+    "name": { "en": "Penhaligon's Halfeti", "uz": "Penhaligon's Halfeti", "ru": "Penhaligon's Halfeti" },
+    "slug": "penhaligons-halfeti",
+    "description": {
+      "en": "Inspired by the sunken village of Halfeti in Turkey, home to the legendary black rose. Grapefruit, bergamot and green notes give way to a dark floral heart of rose, jasmine and lavender, finishing with oud, sandalwood and leather. Mysterious and opulent.",
+      "uz": "Turkiyadagi afsonaviy qora atirgul vatani — cho'kkan Halfeti qishlog'idan ilhomlangan. Greypfrut, bergamot va yashil notalar atirgul, yasemin va lavandaning qorong'u gul yuragiga yo'l ochadi, ud, sandal va charm bilan yakunlanadi.",
+      "ru": "Вдохновлён затонувшей деревней Халфети в Турции, родиной легендарной чёрной розы. Грейпфрут, бергамот и зелёные ноты переходят в тёмное цветочное сердце розы, жасмина и лаванды, завершаясь удом, сандалом и кожей. Загадочный и роскошный."
+    },
+    "price": "295",
+    "compareAtPrice": "340",
+    "images": ["https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800", "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800"],
+    "categoryId": "edp-oriental",
+    "brandId": "penhaligons",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "acqua-di-parma-colonia",
+    "name": { "en": "Acqua di Parma Colonia", "uz": "Acqua di Parma Colonia", "ru": "Acqua di Parma Colonia" },
+    "slug": "acqua-di-parma-colonia",
+    "description": {
+      "en": "The quintessential Italian cologne, crafted since 1916. Sicilian citrus, lavender and rosemary open into a heart of Bulgarian rose and cloves, settling into a base of sandalwood, vetiver and patchouli. The scent of la dolce vita.",
+      "uz": "1916-yildan beri yaratilayotgan haqiqiy italyan odekoloni. Sitsiliya sitrusi, lavanda va rozmarin bolgar atirguli va mixak yuragiga ochiladi, sandal, vetiver va pachuli bazasiga joylashadi. La dolce vita hidi.",
+      "ru": "Квинтэссенция итальянского одеколона, создаваемого с 1916 года. Сицилийские цитрусы, лаванда и розмарин раскрываются в сердце болгарской розы и гвоздики, переходя в базу сандала, ветивера и пачули. Аромат дольче вита."
+    },
+    "price": "155",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "edt-fresh",
+    "brandId": "acqua-di-parma",
+    "material": { "en": "Eau de Cologne, 100ml", "uz": "Odekolon, 100ml", "ru": "Одеколон, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "initio-oud-for-greatness",
+    "name": { "en": "Initio Oud for Greatness", "uz": "Initio Oud for Greatness", "ru": "Initio Oud for Greatness" },
+    "slug": "initio-oud-for-greatness",
+    "description": {
+      "en": "A declaration of power and ambition. Natural Laotian oud and saffron dominate the opening, fused with nutmeg, lavender and a warm amber-musk base. Bold, projecting and supremely confident — designed to leave an unforgettable trail.",
+      "uz": "Kuch va ambitsiya deklaratsiyasi. Tabiiy Laos udi va za'faron ochilishda ustunlik qiladi, muskat yong'og'i, lavanda va iliq ambar-muskus asosiga birlashtirilgan. Jasur, projeksiyali va o'ta ishonchli.",
+      "ru": "Декларация силы и амбиций. Натуральный лаосский уд и шафран доминируют в открытии, сливаясь с мускатным орехом, лавандой и тёплой амбро-мускусной базой. Смелый, проекционный и безупречно уверенный."
+    },
+    "price": "380",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800", "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800"],
+    "categoryId": "arabian-oud",
+    "brandId": "initio",
+    "material": { "en": "Eau de Parfum, 90ml", "uz": "Parfyum suvi, 90ml", "ru": "Парфюмерная вода, 90мл" },
+    "weight": "90ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "xerjoff-naxos",
+    "name": { "en": "Xerjoff Naxos", "uz": "Xerjoff Naxos", "ru": "Xerjoff Naxos" },
+    "slug": "xerjoff-naxos",
+    "description": {
+      "en": "A rich tobacco-vanilla masterpiece inspired by the ancient Greek colony of Naxos in Sicily. Lavender, cinnamon and bergamot open into a sweet tobacco and honey heart, anchored by a warm base of tonka bean, cashmeran and vanilla. Opulent and addictive.",
+      "uz": "Sitsiliyada qadimgi grek koloniyasi Naksosdan ilhomlangan boy tamaki-vanil shoh asari. Lavanda, dolchin va bergamot shirin tamaki va asal yuragiga ochiladi, tonka loviyasi, kashmeran va vanil issiq bazasida joylashgan.",
+      "ru": "Богатый табачно-ванильный шедевр, вдохновлённый древнегреческой колонией Наксос на Сицилии. Лаванда, корица и бергамот раскрываются в сладком табачно-медовом сердце, закреплённом тёплой базой бобов тонка, кашмерана и ванили."
+    },
+    "price": "310",
+    "compareAtPrice": "360",
+    "images": ["https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "edp-oriental",
+    "brandId": "xerjoff",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "al-haramain-amber-oud-gold",
+    "name": { "en": "Al Haramain Amber Oud Gold", "uz": "Al Haramain Ambar Ud Gold", "ru": "Al Haramain Amber Oud Gold" },
+    "slug": "al-haramain-amber-oud-gold",
+    "description": {
+      "en": "A luxurious Arabian fragrance that blends golden amber with precious oud. Top notes of citrus and saffron lead to a majestic heart of rose, oud and agarwood, resting on a velvety base of amber, musk and vanilla. Rich, regal and long-lasting.",
+      "uz": "Oltin ambarni qimmatbaho ud bilan birlashtirgan hashamatli arab atiri. Sitrus va za'faron yuqori notalari atirgul, ud va agarwood ulug'vor yuragiga olib boradi, ambar, muskus va vanil baxmaliy bazasida yotadi. Boy, qirollik va uzoq muddatli.",
+      "ru": "Роскошный арабский аромат, сочетающий золотую амбру с драгоценным удом. Верхние ноты цитрусовых и шафрана ведут к величественному сердцу розы, уда и агарового дерева на бархатистой базе амбры, мускуса и ванили."
+    },
+    "price": "75",
+    "compareAtPrice": "95",
+    "images": ["https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800", "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800"],
+    "categoryId": "arabian-oud",
+    "brandId": "al-haramain",
+    "material": { "en": "Eau de Parfum, 60ml", "uz": "Parfyum suvi, 60ml", "ru": "Парфюмерная вода, 60мл" },
+    "weight": "60ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "ahmed-al-maghribi-dulook",
+    "name": { "en": "Ahmed Al Maghribi Dulook", "uz": "Ahmad Al Mag'ribiy Dulook", "ru": "Ахмед Аль Магриби Дулук" },
+    "slug": "ahmed-al-maghribi-dulook",
+    "description": {
+      "en": "The most anticipated Arabian fragrance of the year. Grapefruit, bergamot and pink pepper ignite the opening, leading to an exotic heart of cardamom, saffron and jasmine, resting on a monumental base of oud, sandalwood and cedarwood. Heritage meets modernity.",
+      "uz": "Yilning eng kutilgan arab atiri. Greypfrut, bergamot va pushti qalampir ochilishni yoqadi, kakula, za'faron va yaseminning ekzotik yuragiga olib boradi, ud, sandal va sadr monumental bazasida yotadi. Meros zamonaviylik bilan uchrashadi.",
+      "ru": "Самый ожидаемый арабский аромат года. Грейпфрут, бергамот и розовый перец зажигают открытие, ведя к экзотическому сердцу кардамона, шафрана и жасмина на монументальной базе уда, сандала и кедра. Наследие встречает современность."
+    },
+    "price": "260",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800"],
+    "categoryId": "extrait",
+    "brandId": "ahmed-al-maghribi",
+    "material": { "en": "Extrait de Parfum, 60ml", "uz": "Parfyum ekstrakti, 60ml", "ru": "Экстракт духов, 60мл" },
+    "weight": "60ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "swiss-arabian-shaghaf-oud",
+    "name": { "en": "Swiss Arabian Shaghaf Oud", "uz": "Swiss Arabian Shag'af Ud", "ru": "Swiss Arabian Шагаф Уд" },
+    "slug": "swiss-arabian-shaghaf-oud",
+    "description": {
+      "en": "A passionate and intense oud fragrance that embodies desire. Raspberry and saffron burst open into a decadent heart of oud wood, rose and praline, resting on a sensual base of vanilla, amber and white musk. Irresistibly seductive.",
+      "uz": "Istakni ifodalaydigan ishtiyoqli va kuchli ud atiri. Malina va za'faron ud yog'ochi, atirgul va pralinening dabdabali yuragiga ochiladi, vanil, ambar va oq muskusning hissiy bazasida yotadi. Chidab bo'lmas darajada maftunkor.",
+      "ru": "Страстный и интенсивный удовый аромат, воплощающий желание. Малина и шафран раскрываются в декадентском сердце удового дерева, розы и пралине на чувственной базе ванили, амбры и белого мускуса. Неотразимо соблазнительный."
+    },
+    "price": "55",
+    "compareAtPrice": "68",
+    "images": ["https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800"],
+    "categoryId": "arabian-oud",
+    "brandId": "swiss-arabian",
+    "material": { "en": "Eau de Parfum, 75ml", "uz": "Parfyum suvi, 75ml", "ru": "Парфюмерная вода, 75мл" },
+    "weight": "75ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "ajmal-dahn-al-oud-moattaq",
+    "name": { "en": "Ajmal Dahn Al Oud Moattaq", "uz": "Ajmal Dahn Al Ud Moattaq", "ru": "Аджмал Дахн Аль Уд Моаттак" },
+    "slug": "ajmal-dahn-al-oud-moattaq",
+    "description": {
+      "en": "A premium concentrated perfume oil in the traditional attar style. Natural oud oil is aged and blended with rose, saffron and musk to produce a complex, multi-layered scent that evolves over hours on the skin. Pure Arabian luxury.",
+      "uz": "An'anaviy attar uslubidagi yuqori sifatli konsentrlangan parfyum moyi. Tabiiy ud moyi atirgul, za'faron va muskus bilan yetiltirilgan va aralashtirilgan, teridagi soatlar davomida rivojlanadigan murakkab, ko'p qatlamli hid ishlab chiqaradi.",
+      "ru": "Премиальное концентрированное парфюмерное масло в традиционном стиле аттар. Натуральное удовое масло выдерживается и смешивается с розой, шафраном и мускусом, создавая сложный многослойный аромат, раскрывающийся часами на коже."
+    },
+    "price": "185",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800"],
+    "categoryId": "arabian-musk",
+    "brandId": "ajmal",
+    "material": { "en": "Perfume Oil, 12ml", "uz": "Parfyum moyi, 12ml", "ru": "Парфюмерное масло, 12мл" },
+    "weight": "12ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "memo-african-leather",
+    "name": { "en": "Memo African Leather", "uz": "Memo Afrikacha Charm", "ru": "Memo African Leather" },
+    "slug": "memo-african-leather",
+    "description": {
+      "en": "An olfactory voyage to the vast African savannas. Cardamom, geranium and cumin create a warm, spicy opening that blends into a heart of oud and leather, enriched by a base of vetiver, musk and birch. Adventurous and untamed.",
+      "uz": "Keng Afrika savanalariga hidli sayohat. Kakula, geranium va zira iliq, achchiq ochilish yaratadi, ud va charm yuragiga aralashadi, vetiver, muskus va qayin bazasi bilan boyitilgan. Sarguzashtli va jilovsiz.",
+      "ru": "Ольфакторное путешествие по бескрайним африканским саваннам. Кардамон, герань и кумин создают тёплое пряное открытие, переходящее в сердце уда и кожи, обогащённое базой ветивера, мускуса и берёзы. Авантюрный и необузданный."
+    },
+    "price": "295",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800", "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800"],
+    "categoryId": "edp-woody",
+    "brandId": "memo-paris",
+    "material": { "en": "Eau de Parfum, 75ml", "uz": "Parfyum suvi, 75ml", "ru": "Парфюмерная вода, 75мл" },
+    "weight": "75ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "tiziana-terenzi-kirke",
+    "name": { "en": "Tiziana Terenzi Kirke", "uz": "Tiziana Terenzi Kirke", "ru": "Тициана Терензи Кирке" },
+    "slug": "tiziana-terenzi-kirke",
+    "description": {
+      "en": "Named after the enchantress of Greek mythology, Kirke is a bewitching fruity-floral extrait. Peach, passion fruit and raspberry burst into a heart of heliotrope, jasmine and rose, finished with musk, vanilla and patchouli. Enchanting and irresistible.",
+      "uz": "Yunoniston mifologiyasidagi sehrgarning nomi bilan atalgan Kirke — maftunkor mevali-gulli ekstrakt. Shaftoli, marakuya va malina geliotrope, yasemin va atirgul yuragiga ochiladi, muskus, vanil va pachuli bilan yakunlanadi. Maftunkor va qarshisiga bo'lmas.",
+      "ru": "Названный в честь волшебницы греческой мифологии, Kirke — чарующий фруктово-цветочный экстракт. Персик, маракуйя и малина раскрываются в сердце гелиотропа, жасмина и розы, завершаясь мускусом, ванилью и пачули. Волшебный и неотразимый."
+    },
+    "price": "365",
+    "compareAtPrice": "420",
+    "images": ["https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800"],
+    "categoryId": "extrait",
+    "brandId": "tiziana-terenzi",
+    "material": { "en": "Extrait de Parfum, 100ml", "uz": "Parfyum ekstrakti, 100ml", "ru": "Экстракт духов, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "nishane-hacivat",
+    "name": { "en": "Nishane Hacivat", "uz": "Nishane Hacivat", "ru": "Нишане Хадживат" },
+    "slug": "nishane-hacivat",
+    "description": {
+      "en": "A fresh, fruity and woody extrait inspired by the witty Turkish shadow puppet character. Pineapple, bergamot and grapefruit sparkle over a heart of jasmine and patchouli, anchored by oakmoss, cedarwood and ambroxan. Sharp, clean and remarkably projecting.",
+      "uz": "Zukko turk soya qo'g'irchoq personajidan ilhomlangan yangi, mevali va yog'ochli ekstrakt. Ananas, bergamot va greypfrut yasemin va pachuli yuragida porlaydi, eman moxi, sadr va ambroxan bilan mustahkamlangan. O'tkir, toza va ajoyib proektsiya.",
+      "ru": "Свежий, фруктовый и древесный экстракт, вдохновлённый остроумным персонажем турецкого теневого театра. Ананас, бергамот и грейпфрут сверкают над сердцем жасмина и пачули, закреплённым дубовым мхом, кедром и амброксаном. Острый, чистый, с потрясающей проекцией."
+    },
+    "price": "250",
+    "compareAtPrice": "290",
+    "images": ["https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800", "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "extrait",
+    "brandId": "nishane",
+    "material": { "en": "Extrait de Parfum, 50ml", "uz": "Parfyum ekstrakti, 50ml", "ru": "Экстракт духов, 50мл" },
+    "weight": "50ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "attar-collection-the-queen-of-sheba",
+    "name": { "en": "Attar Collection The Queen of Sheba", "uz": "Attar Collection Saba malikasi", "ru": "Attar Collection Царица Савская" },
+    "slug": "attar-collection-queen-of-sheba",
+    "description": {
+      "en": "A tribute to the legendary queen — opulent, mysterious and feminine. Saffron, bergamot and red fruits open into a rich heart of oud, Turkish rose and incense, grounded by sandalwood, amber and vanilla. A royal Arabian fragrance.",
+      "uz": "Afsonaviy malikaga bag'ishlangan — hashamatli, sirli va ayollik. Za'faron, bergamot va qizil mevalar ud, turk atirguli va tutatqining boy yuragiga ochiladi, sandal, ambar va vanil bilan mustahkamlangan. Qirollik arab atiri.",
+      "ru": "Дань легендарной царице — роскошный, загадочный и женственный. Шафран, бергамот и красные фрукты раскрываются в богатом сердце уда, турецкой розы и ладана на базе сандала, амбры и ванили. Королевский арабский аромат."
+    },
+    "price": "220",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1541643600914-78b084683601?w=800", "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800"],
+    "categoryId": "arabian-rose",
+    "brandId": "attar-collection",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "rasasi-hawas",
+    "name": { "en": "Rasasi Hawas", "uz": "Rasasi Havos", "ru": "Расаси Хавас" },
+    "slug": "rasasi-hawas",
+    "description": {
+      "en": "A fresh, aquatic and aromatic men's fragrance that punches far above its price. Bergamot, apple and cinnamon open into a heart of ambroxan, jasmine and violet leaves, resting on a base of woody notes, musk and sea salt. A beast-mode performer.",
+      "uz": "Narxidan ancha yuqori bo'lgan yangi, suv va aromatik erkaklar atiri. Bergamot, olma va dolchin ambroxan, yasemin va binafsha barglarining yuragiga ochiladi, yog'ochli notalar, muskus va dengiz tuzi bazasida yotadi. Hayvon rejimida ishlaydi.",
+      "ru": "Свежий, акватический и ароматический мужской парфюм, значительно превосходящий свою цену. Бергамот, яблоко и корица раскрываются в сердце амброксана, жасмина и листьев фиалки на базе древесных нот, мускуса и морской соли. Монстр стойкости."
+    },
+    "price": "42",
+    "compareAtPrice": "55",
+    "images": ["https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800"],
+    "categoryId": "edt-aromatic",
+    "brandId": "rasasi",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "initio-musk-therapy",
+    "name": { "en": "Initio Musk Therapy", "uz": "Initio Mushk Terapiyasi", "ru": "Initio Musk Therapy" },
+    "slug": "initio-musk-therapy",
+    "description": {
+      "en": "A minimalist musk fragrance designed to elevate the spirit. Clean white musk is layered with a whisper of rose and bergamot, creating a skin-scent that radiates quiet confidence. Therapeutic, intimate and utterly modern.",
+      "uz": "Ruhni yuksaltirish uchun yaratilgan minimalistik muskus atiri. Toza oq mushk atirgul va bergamotning shivirlashi bilan qatlamlangan, jimgina ishonchni tarqatadigan teri hidi yaratadi. Terapevtik, yaqin va mutlaqo zamonaviy.",
+      "ru": "Минималистичный мускусный аромат, созданный для возвышения духа. Чистый белый мускус наслаивается с шёпотом розы и бергамота, создавая аромат кожи, излучающий тихую уверенность. Терапевтический, интимный и абсолютно современный."
+    },
+    "price": "310",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800", "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "arabian-musk",
+    "brandId": "initio",
+    "material": { "en": "Eau de Parfum, 90ml", "uz": "Parfyum suvi, 90ml", "ru": "Парфюмерная вода, 90мл" },
+    "weight": "90ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "penhaligons-bold-blend",
+    "name": { "en": "Penhaligon's Bold Blend", "uz": "Penhaligon's Bold Blend", "ru": "Penhaligon's Bold Blend" },
+    "slug": "penhaligons-bold-blend",
+    "description": {
+      "en": "A fresh and invigorating aromatic blend crafted to boost your mood. Peppermint and clary sage burst open into a heart of violet leaf and palo santo, settled by a grounding base of cypress and cypriol. Direct, uplifting and completely addictive.",
+      "uz": "Kayfiyatingizni ko'tarish uchun yaratilgan yangi va tetiklashtiruvchi aromatik aralashma. Yalpiz va oq adaçayı binafsha barglari va palo santoning yuragiga ochiladi, sarv va sipriol asosi bilan mustahkamlangan. To'g'ridan-to'g'ri, ko'taruvchi va to'liq ishtiyoqli.",
+      "ru": "Свежая и бодрящая ароматическая композиция, созданная для поднятия настроения. Мята и мускатный шалфей раскрываются в сердце листа фиалки и пало санто, закреплённом базой кипариса и циприола. Прямой, вдохновляющий и затягивающий."
+    },
+    "price": "295",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800", "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800"],
+    "categoryId": "edt-aromatic",
+    "brandId": "penhaligons",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  }
+]

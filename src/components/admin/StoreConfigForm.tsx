@@ -71,26 +71,45 @@ export function StoreConfigForm({ config }: { config: StoreConfig | undefined })
     const langTabs = ['en', 'uz', 'ru'] as const;
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-8">
-            <section className="rounded-lg border border-border bg-card p-6">
-                <h2 className="mb-4 font-display text-lg font-semibold text-foreground">{t('general')}</h2>
-                <div className="space-y-4">
-                    <div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+            {/* General Settings */}
+            <section className="rounded-xl border border-border bg-card shadow-card">
+                <div className="border-b border-border px-6 py-4">
+                    <h2 className="font-display text-base font-semibold text-foreground">{t('general')}</h2>
+                    <p className="mt-0.5 text-xs text-muted-foreground">Basic store identity and regional settings</p>
+                </div>
+                <div className="space-y-5 p-6">
+                    <div className="space-y-1.5">
                         <label className="label">{t('storeName')}</label>
-                        <input className="input mt-1" value={form.storeName} onChange={(e) => setStr('storeName', e.target.value)} />
+                        <input
+                            className="input"
+                            value={form.storeName}
+                            onChange={(e) => setStr('storeName', e.target.value)}
+                            placeholder="My Store"
+                        />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
-                        <div>
+                        <div className="space-y-1.5">
                             <label className="label">{t('currency')}</label>
-                            <input className="input mt-1" value={form.currency} onChange={(e) => setStr('currency', e.target.value)} placeholder="USD" />
+                            <input
+                                className="input"
+                                value={form.currency}
+                                onChange={(e) => setStr('currency', e.target.value)}
+                                placeholder="USD"
+                            />
                         </div>
-                        <div>
+                        <div className="space-y-1.5">
                             <label className="label">{t('locale')}</label>
-                            <input className="input mt-1" value={form.locale} onChange={(e) => setStr('locale', e.target.value)} placeholder="en-US" />
+                            <input
+                                className="input"
+                                value={form.locale}
+                                onChange={(e) => setStr('locale', e.target.value)}
+                                placeholder="en-US"
+                            />
                         </div>
                     </div>
-                    <div>
-                        <label className="label mb-2 block">{t('footerText')}</label>
+                    <div className="space-y-1.5">
+                        <label className="label">{t('footerText')}</label>
                         <Tabs defaultValue="en">
                             <TabsList className="mb-2">
                                 {langTabs.map((l) => (
@@ -112,71 +131,107 @@ export function StoreConfigForm({ config }: { config: StoreConfig | undefined })
                 </div>
             </section>
 
-            <section className="rounded-lg border border-border bg-card p-6">
-                <div className="mb-4 flex items-center justify-between">
-                    <h2 className="font-display text-lg font-semibold text-foreground">{t('heroSection')}</h2>
-                    <label className="flex cursor-pointer items-center gap-2 text-sm">
-                        <span className="text-muted-foreground">{t('enabled')}</span>
-                        <div
+            {/* Hero Section */}
+            <section className="rounded-xl border border-border bg-card shadow-card">
+                <div className="flex items-center justify-between border-b border-border px-6 py-4">
+                    <div>
+                        <h2 className="font-display text-base font-semibold text-foreground">{t('heroSection')}</h2>
+                        <p className="mt-0.5 text-xs text-muted-foreground">Homepage banner content and image</p>
+                    </div>
+                    <label className="flex cursor-pointer items-center gap-2.5">
+                        <span className="text-xs font-medium text-muted-foreground">{t('enabled')}</span>
+                        <button
+                            type="button"
+                            role="switch"
+                            aria-checked={form.heroEnabled}
                             onClick={() => setStr('heroEnabled', !form.heroEnabled)}
-                            className={`relative h-5 w-9 cursor-pointer rounded-full transition-colors ${form.heroEnabled ? 'bg-primary' : 'bg-muted'}`}
+                            className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20 ${form.heroEnabled ? 'bg-primary' : 'bg-muted'}`}
                         >
-                            <div className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${form.heroEnabled ? 'translate-x-4' : 'translate-x-0.5'}`} />
-                        </div>
+                            <span className={`pointer-events-none inline-block h-4 w-4 rounded-full bg-white shadow-sm transition-transform ${form.heroEnabled ? 'translate-x-4' : 'translate-x-0'}`} />
+                        </button>
                     </label>
                 </div>
 
-                <Tabs defaultValue="en">
-                    <TabsList className="mb-3">
-                        {langTabs.map((l) => (
-                            <TabsTrigger key={l} value={l} className="uppercase">{l}</TabsTrigger>
-                        ))}
-                    </TabsList>
-                    {langTabs.map((lang) => (
-                        <TabsContent key={lang} value={lang} className="space-y-4">
-                            <div>
-                                <label className="label">{t('title')} ({lang.toUpperCase()})</label>
-                                <input className="input mt-1" value={form.heroTitle[lang]}
-                                    onChange={(e) => setLocalized('heroTitle', lang, e.target.value)}
-                                    placeholder={`Hero title (${lang.toUpperCase()})`} />
-                            </div>
-                            <div>
-                                <label className="label">{t('subtitle')} ({lang.toUpperCase()})</label>
-                                <textarea className="input mt-1 h-24 resize-none" value={form.heroSubtitle[lang]}
-                                    onChange={(e) => setLocalized('heroSubtitle', lang, e.target.value)}
-                                    placeholder={`Hero subtitle (${lang.toUpperCase()})...`} />
-                            </div>
-                            <div>
-                                <label className="label">{t('ctaText')} ({lang.toUpperCase()})</label>
-                                <input className="input mt-1" value={form.heroCtaText[lang]}
-                                    onChange={(e) => setLocalized('heroCtaText', lang, e.target.value)}
-                                    placeholder={`CTA text (${lang.toUpperCase()})`} />
-                            </div>
-                        </TabsContent>
-                    ))}
-                </Tabs>
-
-                <div className="mt-4 grid grid-cols-2 gap-4">
-                    <div>
-                        <label className="label">{t('ctaLink')}</label>
-                        <input className="input mt-1" value={form.heroCtaLink} onChange={(e) => setStr('heroCtaLink', e.target.value)} />
+                <div className="p-6 space-y-6">
+                    <div className="space-y-1.5">
+                        <label className="label">Localized Content</label>
+                        <Tabs defaultValue="en">
+                            <TabsList className="mb-4">
+                                {langTabs.map((l) => (
+                                    <TabsTrigger key={l} value={l} className="uppercase">{l}</TabsTrigger>
+                                ))}
+                            </TabsList>
+                            {langTabs.map((lang) => (
+                                <TabsContent key={lang} value={lang}>
+                                    <div className="rounded-lg border border-border bg-muted/30 p-4 space-y-4">
+                                        <div className="space-y-1.5">
+                                            <label className="label">{t('title')}</label>
+                                            <input
+                                                className="input"
+                                                value={form.heroTitle[lang]}
+                                                onChange={(e) => setLocalized('heroTitle', lang, e.target.value)}
+                                                placeholder={`Hero title (${lang.toUpperCase()})`}
+                                            />
+                                        </div>
+                                        <div className="space-y-1.5">
+                                            <label className="label">{t('subtitle')}</label>
+                                            <textarea
+                                                className="input h-24 w-full resize-none"
+                                                value={form.heroSubtitle[lang]}
+                                                onChange={(e) => setLocalized('heroSubtitle', lang, e.target.value)}
+                                                placeholder={`Hero subtitle (${lang.toUpperCase()})...`}
+                                            />
+                                        </div>
+                                        <div className="space-y-1.5">
+                                            <label className="label">{t('ctaText')}</label>
+                                            <input
+                                                className="input"
+                                                value={form.heroCtaText[lang]}
+                                                onChange={(e) => setLocalized('heroCtaText', lang, e.target.value)}
+                                                placeholder={`CTA text (${lang.toUpperCase()})`}
+                                            />
+                                        </div>
+                                    </div>
+                                </TabsContent>
+                            ))}
+                        </Tabs>
                     </div>
-                </div>
-                <div className="mt-4">
-                    <label className="label">{t('heroImage')}</label>
-                    <ImageUpload value={form.heroImageUrl} onChange={(url) => setStr('heroImageUrl', url)} />
+
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-1.5">
+                            <label className="label">{t('ctaLink')}</label>
+                            <input
+                                className="input"
+                                value={form.heroCtaLink}
+                                onChange={(e) => setStr('heroCtaLink', e.target.value)}
+                                placeholder="/catalog"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                        <label className="label">{t('heroImage')}</label>
+                        <ImageUpload value={form.heroImageUrl} onChange={(url) => setStr('heroImageUrl', url)} />
+                    </div>
                 </div>
             </section>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 pt-2">
                 <button
                     type="submit"
                     disabled={saving}
-                    className="inline-block bg-gradient-gold px-8 py-3 text-sm font-semibold uppercase tracking-wide text-charcoal transition-all hover:brightness-110 disabled:opacity-60"
+                    className="rounded-md bg-gradient-gold px-8 py-2.5 text-sm font-semibold uppercase tracking-wide text-charcoal transition-all hover:brightness-110 disabled:opacity-60"
                 >
                     {saving ? t('saving') : t('saveChanges')}
                 </button>
-                {saved && <span className="text-sm font-medium text-green-600">{t('savedSuccessfully')}</span>}
+                {saved && (
+                    <span className="flex items-center gap-1.5 text-sm font-medium text-green-600">
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {t('savedSuccessfully')}
+                    </span>
+                )}
             </div>
         </form>
     );

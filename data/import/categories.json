@@ -1,0 +1,106 @@
+[
+  {
+    "id": "women",
+    "name": { "en": "Women's Perfumes", "uz": "Ayollar atiri", "ru": "Женская парфюмерия" },
+    "slug": "women",
+    "imageUrl": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800",
+    "parentId": null,
+    "sortOrder": 0
+  },
+  {
+    "id": "men",
+    "name": { "en": "Men's Perfumes", "uz": "Erkaklar atiri", "ru": "Мужская парфюмерия" },
+    "slug": "men",
+    "imageUrl": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800",
+    "parentId": null,
+    "sortOrder": 1
+  },
+  {
+    "id": "unisex",
+    "name": { "en": "Unisex Fragrances", "uz": "Uniseks atirlar", "ru": "Унисекс ароматы" },
+    "slug": "unisex",
+    "imageUrl": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800",
+    "parentId": null,
+    "sortOrder": 2
+  },
+  {
+    "id": "niche",
+    "name": { "en": "Niche & Artisan", "uz": "Noyob va qo'lda ishlangan", "ru": "Нишевая парфюмерия" },
+    "slug": "niche",
+    "imageUrl": "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800",
+    "parentId": null,
+    "sortOrder": 3
+  },
+  {
+    "id": "gift-sets",
+    "name": { "en": "Gift Sets", "uz": "Sovg'a to'plamlari", "ru": "Подарочные наборы" },
+    "slug": "gift-sets",
+    "imageUrl": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800",
+    "parentId": null,
+    "sortOrder": 4
+  },
+  {
+    "id": "floral",
+    "name": { "en": "Floral", "uz": "Gulli atirlar", "ru": "Цветочные" },
+    "slug": "floral",
+    "imageUrl": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800",
+    "parentId": "women",
+    "sortOrder": 0
+  },
+  {
+    "id": "oriental-women",
+    "name": { "en": "Oriental", "uz": "Sharqona", "ru": "Восточные" },
+    "slug": "oriental-women",
+    "imageUrl": "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800",
+    "parentId": "women",
+    "sortOrder": 1
+  },
+  {
+    "id": "fresh-women",
+    "name": { "en": "Fresh & Light", "uz": "Yengil va toza", "ru": "Свежие и лёгкие" },
+    "slug": "fresh-women",
+    "imageUrl": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800",
+    "parentId": "women",
+    "sortOrder": 2
+  },
+  {
+    "id": "woody-men",
+    "name": { "en": "Woody", "uz": "Yog'ochli atirlar", "ru": "Древесные" },
+    "slug": "woody-men",
+    "imageUrl": "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800",
+    "parentId": "men",
+    "sortOrder": 0
+  },
+  {
+    "id": "fresh-men",
+    "name": { "en": "Fresh & Aquatic", "uz": "Toza va dengiz hidi", "ru": "Свежие и акватические" },
+    "slug": "fresh-men",
+    "imageUrl": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800",
+    "parentId": "men",
+    "sortOrder": 1
+  },
+  {
+    "id": "spicy-men",
+    "name": { "en": "Spicy & Oriental", "uz": "Ziravor va sharqona", "ru": "Пряные и восточные" },
+    "slug": "spicy-men",
+    "imageUrl": "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800",
+    "parentId": "men",
+    "sortOrder": 2
+  },
+  {
+    "id": "oud",
+    "name": { "en": "Oud Collection", "uz": "Ud kolleksiyasi", "ru": "Коллекция удов" },
+    "slug": "oud",
+    "imageUrl": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800",
+    "parentId": "niche",
+    "sortOrder": 0
+  },
+  {
+    "id": "exclusive",
+    "name": { "en": "Exclusive Limited", "uz": "Eksklyuziv cheklangan", "ru": "Эксклюзивные лимитированные" },
+    "slug": "exclusive",
+    "imageUrl": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800",
+    "parentId": "niche",
+    "sortOrder": 1
+  }
+]

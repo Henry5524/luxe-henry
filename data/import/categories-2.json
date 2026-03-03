@@ -1,0 +1,106 @@
+[
+  {
+    "id": "eau-de-parfum",
+    "name": { "en": "Eau de Parfum", "uz": "Parfyum suvi", "ru": "Парфюмерная вода" },
+    "slug": "eau-de-parfum",
+    "imageUrl": "https://images.unsplash.com/photo-1595425959630-b5765a48fbe3?w=800",
+    "parentId": null,
+    "sortOrder": 0
+  },
+  {
+    "id": "eau-de-toilette",
+    "name": { "en": "Eau de Toilette", "uz": "Tualat suvi", "ru": "Туалетная вода" },
+    "slug": "eau-de-toilette",
+    "imageUrl": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800",
+    "parentId": null,
+    "sortOrder": 1
+  },
+  {
+    "id": "extrait",
+    "name": { "en": "Extrait de Parfum", "uz": "Parfyum ekstrakti", "ru": "Экстракт духов" },
+    "slug": "extrait-de-parfum",
+    "imageUrl": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800",
+    "parentId": null,
+    "sortOrder": 2
+  },
+  {
+    "id": "arabian",
+    "name": { "en": "Arabian Collection", "uz": "Arabiston kolleksiyasi", "ru": "Арабская коллекция" },
+    "slug": "arabian",
+    "imageUrl": "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800",
+    "parentId": null,
+    "sortOrder": 3
+  },
+  {
+    "id": "discovery",
+    "name": { "en": "Discovery Sets", "uz": "Tanishuv to'plamlari", "ru": "Наборы для знакомства" },
+    "slug": "discovery-sets",
+    "imageUrl": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800",
+    "parentId": null,
+    "sortOrder": 4
+  },
+  {
+    "id": "edp-floral",
+    "name": { "en": "Floral", "uz": "Gulli", "ru": "Цветочные" },
+    "slug": "edp-floral",
+    "imageUrl": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800",
+    "parentId": "eau-de-parfum",
+    "sortOrder": 0
+  },
+  {
+    "id": "edp-woody",
+    "name": { "en": "Woody & Amber", "uz": "Yog'ochli va ambar", "ru": "Древесные и амбровые" },
+    "slug": "edp-woody",
+    "imageUrl": "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800",
+    "parentId": "eau-de-parfum",
+    "sortOrder": 1
+  },
+  {
+    "id": "edp-oriental",
+    "name": { "en": "Oriental & Spicy", "uz": "Sharqona va ziravorli", "ru": "Восточные и пряные" },
+    "slug": "edp-oriental",
+    "imageUrl": "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800",
+    "parentId": "eau-de-parfum",
+    "sortOrder": 2
+  },
+  {
+    "id": "edt-fresh",
+    "name": { "en": "Fresh & Citrus", "uz": "Yangi va sitrusli", "ru": "Свежие и цитрусовые" },
+    "slug": "edt-fresh",
+    "imageUrl": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800",
+    "parentId": "eau-de-toilette",
+    "sortOrder": 0
+  },
+  {
+    "id": "edt-aromatic",
+    "name": { "en": "Aromatic & Herbal", "uz": "Aromatik va o'tli", "ru": "Ароматические и травяные" },
+    "slug": "edt-aromatic",
+    "imageUrl": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800",
+    "parentId": "eau-de-toilette",
+    "sortOrder": 1
+  },
+  {
+    "id": "arabian-oud",
+    "name": { "en": "Oud & Bakhoor", "uz": "Ud va baxur", "ru": "Уд и бахур" },
+    "slug": "arabian-oud",
+    "imageUrl": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800",
+    "parentId": "arabian",
+    "sortOrder": 0
+  },
+  {
+    "id": "arabian-musk",
+    "name": { "en": "Musk & Attar", "uz": "Mushk va attar", "ru": "Мускус и аттар" },
+    "slug": "arabian-musk",
+    "imageUrl": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800",
+    "parentId": "arabian",
+    "sortOrder": 1
+  },
+  {
+    "id": "arabian-rose",
+    "name": { "en": "Rose & Saffron", "uz": "Atirgul va za'faron", "ru": "Роза и шафран" },
+    "slug": "arabian-rose",
+    "imageUrl": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800",
+    "parentId": "arabian",
+    "sortOrder": 2
+  }
+]

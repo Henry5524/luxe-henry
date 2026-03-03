@@ -38,6 +38,11 @@ export function ProductCard({ product, index = 0, currency = 'USD', locale = 'en
                         alt={name}
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"
+                        onError={(e) => {
+                            const target = e.currentTarget;
+                            target.onerror = null;
+                            target.src = 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=800';
+                        }}
                     />
                 </div>
             </Link>

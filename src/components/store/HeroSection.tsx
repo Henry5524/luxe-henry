@@ -22,9 +22,9 @@ export function HeroSection({ hero, locale }: HeroSectionProps) {
                 <img
                     src={getImageUrl(hero.heroImageUrl)}
                     alt="Hero"
-                    className="h-full w-full object-cover opacity-60"
+                    className="h-full w-full object-cover opacity-85"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/30 to-transparent" />
             </div>
 
             <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6">

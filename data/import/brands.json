@@ -1,0 +1,77 @@
+[
+  {
+    "id": "chanel",
+    "name": { "en": "Chanel", "uz": "Chanel", "ru": "Шанель" },
+    "slug": "chanel"
+  },
+  {
+    "id": "dior",
+    "name": { "en": "Dior", "uz": "Dior", "ru": "Диор" },
+    "slug": "dior"
+  },
+  {
+    "id": "tom-ford",
+    "name": { "en": "Tom Ford", "uz": "Tom Ford", "ru": "Том Форд" },
+    "slug": "tom-ford"
+  },
+  {
+    "id": "ysl",
+    "name": { "en": "Yves Saint Laurent", "uz": "Yves Saint Laurent", "ru": "Ив Сен-Лоран" },
+    "slug": "ysl"
+  },
+  {
+    "id": "creed",
+    "name": { "en": "Creed", "uz": "Creed", "ru": "Крид" },
+    "slug": "creed"
+  },
+  {
+    "id": "lancome",
+    "name": { "en": "Lancôme", "uz": "Lancôme", "ru": "Ланком" },
+    "slug": "lancome"
+  },
+  {
+    "id": "hermes",
+    "name": { "en": "Hermès", "uz": "Hermès", "ru": "Эрмес" },
+    "slug": "hermes"
+  },
+  {
+    "id": "le-labo",
+    "name": { "en": "Le Labo", "uz": "Le Labo", "ru": "Ле Лабо" },
+    "slug": "le-labo"
+  },
+  {
+    "id": "mfk",
+    "name": { "en": "Maison Francis Kurkdjian", "uz": "Maison Francis Kurkdjian", "ru": "Мезон Франсис Куркджан" },
+    "slug": "maison-francis-kurkdjian"
+  },
+  {
+    "id": "pdm",
+    "name": { "en": "Parfums de Marly", "uz": "Parfums de Marly", "ru": "Парфюмс де Марли" },
+    "slug": "parfums-de-marly"
+  },
+  {
+    "id": "jo-malone",
+    "name": { "en": "Jo Malone London", "uz": "Jo Malone London", "ru": "Джо Малон Лондон" },
+    "slug": "jo-malone"
+  },
+  {
+    "id": "amouage",
+    "name": { "en": "Amouage", "uz": "Amouage", "ru": "Амуаж" },
+    "slug": "amouage"
+  },
+  {
+    "id": "versace",
+    "name": { "en": "Versace", "uz": "Versace", "ru": "Версаче" },
+    "slug": "versace"
+  },
+  {
+    "id": "guerlain",
+    "name": { "en": "Guerlain", "uz": "Guerlain", "ru": "Герлен" },
+    "slug": "guerlain"
+  },
+  {
+    "id": "bvlgari",
+    "name": { "en": "Bvlgari", "uz": "Bvlgari", "ru": "Булгари" },
+    "slug": "bvlgari"
+  }
+]

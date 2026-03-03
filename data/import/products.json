@@ -1,0 +1,382 @@
+[
+  {
+    "id": "chanel-no5-edp",
+    "name": { "en": "Chanel N°5 Eau de Parfum", "uz": "Chanel N°5 Parfyum suvi", "ru": "Chanel N°5 Парфюмерная вода" },
+    "slug": "chanel-no5-edp",
+    "description": {
+      "en": "The iconic fragrance that has defined elegance since 1921. A rich floral bouquet of ylang-ylang, rose and jasmine layered over warm notes of sandalwood and vanilla. Timeless, sophisticated, unforgettable.",
+      "uz": "1921-yildan beri nafosatni belgilab kelayotgan mashhur atir. Sandal va vanil issiq notalarida ylang-ylang, atirgul va yasemin gullarining boy gul buketi. Abadiy, nafis, unutilmas.",
+      "ru": "Легендарный аромат, определяющий элегантность с 1921 года. Богатый цветочный букет из иланг-иланга, розы и жасмина на тёплой базе сандала и ванили. Вечный, утончённый, незабываемый."
+    },
+    "price": "165",
+    "compareAtPrice": "190",
+    "images": ["https://images.unsplash.com/photo-1541643600914-78b084683601?w=800", "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800"],
+    "categoryId": "floral",
+    "brandId": "chanel",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "dior-sauvage-parfum",
+    "name": { "en": "Dior Sauvage Parfum", "uz": "Dior Sauvage Parfyum", "ru": "Dior Sauvage Парфюм" },
+    "slug": "dior-sauvage-parfum",
+    "description": {
+      "en": "A powerful and noble fragrance with fresh, citrusy top notes of bergamot that blend into a warm, spicy heart of Sichuan pepper and a deep woody base of sandalwood. Intense, magnetic and long-lasting.",
+      "uz": "Bergamotning yangi, sitrusli yuqori notalari issiq, achchiq Sichuan qalampirining yuragi va sandal yog'ochining chuqur asosiga qo'shiladigan kuchli va olijanob atir. Intensiv, magnetik va uzoq muddatli.",
+      "ru": "Мощный и благородный аромат со свежими цитрусовыми верхними нотами бергамота, переходящими в тёплое пряное сердце сычуаньского перца и глубокую древесную базу сандала. Интенсивный, магнетический, стойкий."
+    },
+    "price": "199",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800", "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "woody-men",
+    "brandId": "dior",
+    "material": { "en": "Parfum, 100ml", "uz": "Parfyum, 100ml", "ru": "Парфюм, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "tom-ford-oud-wood",
+    "name": { "en": "Tom Ford Oud Wood", "uz": "Tom Ford Ud Yog'och", "ru": "Tom Ford Oud Wood" },
+    "slug": "tom-ford-oud-wood",
+    "description": {
+      "en": "A composition of exotic oud wood, rosewood and cardamom, blended with sandalwood and vetiver. Smoky, rare and utterly luxurious — a signature scent for the connoisseur.",
+      "uz": "Ekzotik ud yog'ochi, palisandr va kakula kompozitsiyasi, sandal va vetiver bilan aralashtirilgan. Tutunli, noyob va mutlaqo hashamatli — bilimdonlar uchun imzo atiri.",
+      "ru": "Композиция из экзотического удового дерева, палисандра и кардамона в сочетании с сандалом и ветивером. Дымный, редкий и абсолютно роскошный — фирменный аромат для ценителей."
+    },
+    "price": "340",
+    "compareAtPrice": "390",
+    "images": ["https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800"],
+    "categoryId": "oud",
+    "brandId": "tom-ford",
+    "material": { "en": "Eau de Parfum, 50ml", "uz": "Parfyum suvi, 50ml", "ru": "Парфюмерная вода, 50мл" },
+    "weight": "50ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "ysl-libre-edp",
+    "name": { "en": "YSL Libre Eau de Parfum", "uz": "YSL Libre Parfyum suvi", "ru": "YSL Libre Парфюмерная вода" },
+    "slug": "ysl-libre-edp",
+    "description": {
+      "en": "A bold and daring feminine fragrance that fuses the warmth of Moroccan orange blossom with French lavender essence and a base of vanilla and musk. Free, fearless and absolutely addictive.",
+      "uz": "Marokash apelsin gulining issiqligi bilan frantsuz lavanda ekstraktini va vanil hamda muskus asosini birlashtirgan jasur va dovdirak ayollar atiri. Erkin, qo'rqmas va mutlaqo ishtiyoqli.",
+      "ru": "Смелый и дерзкий женский аромат, сочетающий тепло марокканского флёрдоранжа с эссенцией французской лаванды на базе ванили и мускуса. Свободный, бесстрашный и абсолютно захватывающий."
+    },
+    "price": "155",
+    "compareAtPrice": "180",
+    "images": ["https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800", "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "floral",
+    "brandId": "ysl",
+    "material": { "en": "Eau de Parfum, 90ml", "uz": "Parfyum suvi, 90ml", "ru": "Парфюмерная вода, 90мл" },
+    "weight": "90ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "creed-aventus",
+    "name": { "en": "Creed Aventus", "uz": "Creed Aventus", "ru": "Creed Aventus" },
+    "slug": "creed-aventus",
+    "description": {
+      "en": "Inspired by the dramatic life of a historic emperor, Aventus is a rich, bold and masculine fragrance. Top notes of pineapple and blackcurrant give way to birch and patchouli, finishing with oakmoss and ambergris.",
+      "uz": "Tarixiy imperatorning hayajonli hayotidan ilhomlangan Aventus boy, jasur va erkakona atirdir. Ananas va qora smorodinaning yuqori notalari qayin va pachuli yo'l ochadi, eman moxi va ambergris bilan yakunlanadi.",
+      "ru": "Вдохновлённый яркой жизнью исторического императора, Aventus — насыщенный, смелый и мужественный аромат. Верхние ноты ананаса и чёрной смородины сменяются берёзой и пачули, завершаясь дубовым мхом и амброй."
+    },
+    "price": "445",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800", "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800"],
+    "categoryId": "woody-men",
+    "brandId": "creed",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "lancome-la-vie-est-belle",
+    "name": { "en": "Lancôme La Vie Est Belle", "uz": "Lancôme La Vie Est Belle", "ru": "Lancôme La Vie Est Belle" },
+    "slug": "lancome-la-vie-est-belle",
+    "description": {
+      "en": "Life is beautiful — and so is this iconic fragrance. A sweet, gourmand scent built around iris and patchouli with accents of pear, blackcurrant and praline. Feminine, radiant and universally beloved.",
+      "uz": "Hayot go'zal — va bu mashhur atir ham shunday. Nok, qora smorodina va praline aksanlari bilan iris va pachuli atrofida qurilgan shirin, gurme hidi. Ayollarcha, nurli va hamma tomonidan sevilgan.",
+      "ru": "Жизнь прекрасна — как и этот культовый аромат. Сладкий гурманский парфюм на основе ириса и пачули с акцентами груши, чёрной смородины и пралине. Женственный, сияющий и всеми любимый."
+    },
+    "price": "125",
+    "compareAtPrice": "150",
+    "images": ["https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800"],
+    "categoryId": "oriental-women",
+    "brandId": "lancome",
+    "material": { "en": "Eau de Parfum, 50ml", "uz": "Parfyum suvi, 50ml", "ru": "Парфюмерная вода, 50мл" },
+    "weight": "50ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "hermes-terre-d-hermes",
+    "name": { "en": "Hermès Terre d'Hermès", "uz": "Hermès Terre d'Hermès", "ru": "Hermès Terre d'Hermès" },
+    "slug": "hermes-terre-d-hermes",
+    "description": {
+      "en": "A metaphor of matter — a journey between earth and sky. Orange, pepper and vetiver create a mineral, woody scent that is both grounded and ethereal. Sophisticated and endlessly versatile.",
+      "uz": "Materiya metaforasi — yer va osmon orasidagi sayohat. Apelsin, qalampir va vetiver mineral, yog'ochli hid yaratadi, u ham mustahkam, ham efemer. Nafis va cheksiz ko'p qirrali.",
+      "ru": "Метафора материи — путешествие между землёй и небом. Апельсин, перец и ветивер создают минеральный, древесный аромат, одновременно земной и воздушный. Утончённый и бесконечно универсальный."
+    },
+    "price": "135",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "fresh-men",
+    "brandId": "hermes",
+    "material": { "en": "Eau de Toilette, 100ml", "uz": "Tualat suvi, 100ml", "ru": "Туалетная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "le-labo-santal-33",
+    "name": { "en": "Le Labo Santal 33", "uz": "Le Labo Santal 33", "ru": "Le Labo Santal 33" },
+    "slug": "le-labo-santal-33",
+    "description": {
+      "en": "The cult favourite that started a global obsession. Australian sandalwood and cardamom blend with iris, violet and ambrox to create an addictive, skin-like scent. Unisex, unmistakable, unforgettable.",
+      "uz": "Global ishtiyoqni boshlagan kult sevimli. Avstraliya sandali va kakula iris, binafsha va ambroks bilan aralashib, ishtiyoqli, teriga o'xshash hid yaratadi. Uniseks, boshqalar bilan adashtirmaslik, unutilmas.",
+      "ru": "Культовый фаворит, покоривший весь мир. Австралийский сандал и кардамон в сочетании с ирисом, фиалкой и амброксом создают затягивающий аромат, близкий к запаху кожи. Унисекс, безошибочный, незабываемый."
+    },
+    "price": "240",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800"],
+    "categoryId": "unisex",
+    "brandId": "le-labo",
+    "material": { "en": "Eau de Parfum, 50ml", "uz": "Parfyum suvi, 50ml", "ru": "Парфюмерная вода, 50мл" },
+    "weight": "50ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "mfk-baccarat-rouge-540",
+    "name": { "en": "Baccarat Rouge 540", "uz": "Baccarat Rouge 540", "ru": "Baccarat Rouge 540" },
+    "slug": "mfk-baccarat-rouge-540",
+    "description": {
+      "en": "A luminous and sophisticated fragrance inspired by the legendary Baccarat crystal. Jasmine and saffron top notes dissolve into a cloud of ambergris and cedar, creating a shimmering aura that lingers for hours.",
+      "uz": "Afsonaviy Baccarat kristalidan ilhomlangan yorqin va nafis atir. Yasemin va za'faron yuqori notalari ambergris va sadr bulutiga eriydi, soatlab saqlanadigan yaltiroq aura yaratadi.",
+      "ru": "Светящийся и утончённый аромат, вдохновлённый легендарным хрусталём Baccarat. Верхние ноты жасмина и шафрана растворяются в облаке амбры и кедра, создавая мерцающую ауру, которая держится часами."
+    },
+    "price": "325",
+    "compareAtPrice": "375",
+    "images": ["https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800", "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800"],
+    "categoryId": "exclusive",
+    "brandId": "mfk",
+    "material": { "en": "Eau de Parfum, 70ml", "uz": "Parfyum suvi, 70ml", "ru": "Парфюмерная вода, 70мл" },
+    "weight": "70ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "pdm-delina",
+    "name": { "en": "Parfums de Marly Delina", "uz": "Parfums de Marly Delina", "ru": "Parfums de Marly Delina" },
+    "slug": "pdm-delina",
+    "description": {
+      "en": "A modern yet regal feminine fragrance. Lychee and rhubarb open the scent, leading into a lush heart of Turkish rose and peony, grounded by cashmeran and vanilla. Romantic, distinguished and enchanting.",
+      "uz": "Zamonaviy, ammo qirollik ayollar atiri. Lichi va reveni hidni ochadi, turk atirguli va pion yuragiga olib boradi, kashmeran va vanil bilan mustahkamlangan. Romantik, ajoyib va maftunkor.",
+      "ru": "Современный, но королевский женский аромат. Личи и ревень открывают композицию, ведя к пышному сердцу из турецкой розы и пиона на базе кашмерана и ванили. Романтичный, изысканный и чарующий."
+    },
+    "price": "350",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800", "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "floral",
+    "brandId": "pdm",
+    "material": { "en": "Eau de Parfum, 75ml", "uz": "Parfyum suvi, 75ml", "ru": "Парфюмерная вода, 75мл" },
+    "weight": "75ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "jo-malone-wood-sage",
+    "name": { "en": "Jo Malone Wood Sage & Sea Salt", "uz": "Jo Malone Wood Sage & Sea Salt", "ru": "Jo Malone Wood Sage & Sea Salt" },
+    "slug": "jo-malone-wood-sage-sea-salt",
+    "description": {
+      "en": "Escape the everyday along the windswept coast. Ambrette seeds bring a mineral warmth, while sea salt and sage create a fresh, earthy and utterly relaxed feeling. Effortlessly cool and endlessly wearable.",
+      "uz": "Shamol esadigan qirg'oq bo'ylab kundalik hayotdan qoching. Ambrette urug'lari mineral issiqlikni olib keladi, dengiz tuzi va adaçayı esa yangi, tuproqli va butunlay xotirjam his yaratadi. Oson va cheksiz kiyish mumkin.",
+      "ru": "Побег из повседневности вдоль продуваемого ветром побережья. Семена амбретты дарят минеральное тепло, а морская соль и шалфей создают свежее, земное и абсолютно расслабленное ощущение. Непринуждённо стильный."
+    },
+    "price": "78",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "unisex",
+    "brandId": "jo-malone",
+    "material": { "en": "Cologne, 100ml", "uz": "Odekolon, 100ml", "ru": "Одеколон, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "amouage-reflection-man",
+    "name": { "en": "Amouage Reflection Man", "uz": "Amouage Reflection Man", "ru": "Amouage Reflection Man" },
+    "slug": "amouage-reflection-man",
+    "description": {
+      "en": "A masterful floral-woody fragrance for men. Rosemary and pink pepper introduce a heart of jasmine, neroli and orris, settling into a refined base of sandalwood, cedar and white musk. Impeccably elegant.",
+      "uz": "Erkaklar uchun mohir gulli-yog'ochli atir. Rozmarin va pushti qalampir yasemin, neroli va iris yuragini tanishtiradi, sandal, sadr va oq muskus bazasida joylashadi. Benuqson nafis.",
+      "ru": "Мастерски созданный цветочно-древесный аромат для мужчин. Розмарин и розовый перец открывают сердце из жасмина, нероли и ириса, переходящее в изысканную базу сандала, кедра и белого мускуса. Безупречно элегантный."
+    },
+    "price": "295",
+    "compareAtPrice": "340",
+    "images": ["https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800"],
+    "categoryId": "fresh-men",
+    "brandId": "amouage",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "versace-eros",
+    "name": { "en": "Versace Eros", "uz": "Versace Eros", "ru": "Versace Eros" },
+    "slug": "versace-eros",
+    "description": {
+      "en": "Named after the Greek god of love, Eros is a bold and vibrant fragrance for men. Mint, green apple and Italian lemon fuse with tonka bean, ambroxan and geranium for an energetic, confident and seductive scent.",
+      "uz": "Yunon sevgi xudosi nomi bilan atalgan Eros erkaklar uchun jasur va jonli atirdir. Yalpiz, yashil olma va italyan limoni tonka loviyasi, ambroxan va geranium bilan birlashib, tetik, ishonchli va maftunkor hid yaratadi.",
+      "ru": "Названный в честь греческого бога любви, Eros — смелый и яркий мужской аромат. Мята, зелёное яблоко и итальянский лимон сливаются с бобами тонка, амброксаном и геранью, создавая энергичный, уверенный и соблазнительный запах."
+    },
+    "price": "98",
+    "compareAtPrice": "120",
+    "images": ["https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "spicy-men",
+    "brandId": "versace",
+    "material": { "en": "Eau de Toilette, 100ml", "uz": "Tualat suvi, 100ml", "ru": "Туалетная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "guerlain-shalimar",
+    "name": { "en": "Guerlain Shalimar", "uz": "Guerlain Shalimar", "ru": "Guerlain Shalimar" },
+    "slug": "guerlain-shalimar",
+    "description": {
+      "en": "One of the world's first oriental fragrances, created in 1925. A legendary composition of bergamot, iris and vanilla with smoky leather and incense undertones. Timeless and deeply sensual.",
+      "uz": "1925-yilda yaratilgan dunyodagi birinchi sharqona atirlardan biri. Tutunli charm va tutatqi tagnotalarida bergamot, iris va vanil afsonaviy kompozitsiyasi. Abadiy va chuqur hissiy.",
+      "ru": "Один из первых восточных ароматов в мире, созданный в 1925 году. Легендарная композиция из бергамота, ириса и ванили с дымными кожаными и ладанными оттенками. Вечный и глубоко чувственный."
+    },
+    "price": "118",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800"],
+    "categoryId": "oriental-women",
+    "brandId": "guerlain",
+    "material": { "en": "Eau de Parfum, 90ml", "uz": "Parfyum suvi, 90ml", "ru": "Парфюмерная вода, 90мл" },
+    "weight": "90ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "bvlgari-man-wood-essence",
+    "name": { "en": "Bvlgari Man Wood Essence", "uz": "Bvlgari Man Wood Essence", "ru": "Bvlgari Man Wood Essence" },
+    "slug": "bvlgari-man-wood-essence",
+    "description": {
+      "en": "A woody aromatic fragrance capturing the essence of nature's strength. Citrus and coriander top notes lead to a heart of cypress and cedarwood, grounded by benzoin and organic vetiver. Fresh yet commanding.",
+      "uz": "Tabiat kuchining mohiyatini aks ettiruvchi yog'ochli aromatik atir. Sitrus va kashnich yuqori notalari sarv va sadr yuragiga olib boradi, benzoin va organik vetiver bilan mustahkamlangan. Yangi, ammo buyruqli.",
+      "ru": "Древесный ароматический парфюм, передающий силу природы. Верхние ноты цитрусовых и кориандра ведут к сердцу из кипариса и кедра на базе бензоина и органического ветивера. Свежий, но властный."
+    },
+    "price": "108",
+    "compareAtPrice": "130",
+    "images": ["https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800", "https://images.unsplash.com/photo-1594035910387-fbd1a485b12e?w=800"],
+    "categoryId": "woody-men",
+    "brandId": "bvlgari",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "dior-miss-dior",
+    "name": { "en": "Miss Dior Eau de Parfum", "uz": "Miss Dior Parfyum suvi", "ru": "Miss Dior Парфюмерная вода" },
+    "slug": "miss-dior-edp",
+    "description": {
+      "en": "A fresh and sensual fragrance that celebrates love. Grasse rose and peony open into a heart of lily of the valley, wrapped in a soft, musky base of rosewood. Romantic, luminous and absolutely captivating.",
+      "uz": "Sevgini nishonlaydigan yangi va hissiy atir. Grass atirguli va pion vodiy nilufari yuragiga ochiladi, palisandr yumshoq, muskusli bazasiga o'ralgan. Romantik, yorqin va mutlaqo maftunkor.",
+      "ru": "Свежий и чувственный аромат, воспевающий любовь. Грасская роза и пион раскрываются в сердце ландыша, окутанном мягкой мускусной базой палисандра. Романтичный, сияющий и абсолютно пленительный."
+    },
+    "price": "155",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1541643600914-78b084683601?w=800", "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800"],
+    "categoryId": "floral",
+    "brandId": "dior",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "tom-ford-black-orchid",
+    "name": { "en": "Tom Ford Black Orchid", "uz": "Tom Ford Qora Orchideya", "ru": "Tom Ford Black Orchid" },
+    "slug": "tom-ford-black-orchid",
+    "description": {
+      "en": "A luxurious and daring scent of black truffle, dark florals and patchouli. Ylang-ylang, citrus and orchid create an opulent, mysterious aura. One of the most iconic unisex perfumes ever created.",
+      "uz": "Qora trufel, qorong'u gullar va pachulining hashamatli va jasur hidi. Ylang-ylang, sitrus va orchideya hashamatli, sirli aura yaratadi. Yaratilgan eng mashhur uniseks atirlardan biri.",
+      "ru": "Роскошный и дерзкий аромат чёрного трюфеля, тёмных цветов и пачули. Иланг-иланг, цитрус и орхидея создают пышную, загадочную ауру. Один из самых культовых унисекс-парфюмов в истории."
+    },
+    "price": "175",
+    "compareAtPrice": "210",
+    "images": ["https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800", "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800"],
+    "categoryId": "unisex",
+    "brandId": "tom-ford",
+    "material": { "en": "Eau de Parfum, 50ml", "uz": "Parfyum suvi, 50ml", "ru": "Парфюмерная вода, 50мл" },
+    "weight": "50ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "chanel-bleu-de-chanel",
+    "name": { "en": "Bleu de Chanel", "uz": "Bleu de Chanel", "ru": "Bleu de Chanel" },
+    "slug": "bleu-de-chanel",
+    "description": {
+      "en": "A woody aromatic fragrance that reveals the nature of a man who defies convention. Citrus and mint merge with dry cedar, labdanum and sandalwood. Unmistakably refined, endlessly versatile.",
+      "uz": "An'analarga qarshi chiqqan erkakning tabiatini oshkor qiladigan yog'ochli aromatik atir. Sitrus va yalpiz quruq sadr, labdanum va sandal bilan birlashadi. Bexato nafis, cheksiz ko'p qirrali.",
+      "ru": "Древесный ароматический парфюм, раскрывающий натуру мужчины, бросающего вызов условностям. Цитрус и мята сливаются с сухим кедром, ладаном и сандалом. Безошибочно изысканный, бесконечно универсальный."
+    },
+    "price": "170",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800"],
+    "categoryId": "woody-men",
+    "brandId": "chanel",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "dior-oud-ispahan",
+    "name": { "en": "Dior Oud Ispahan", "uz": "Dior Ud Isfahon", "ru": "Dior Oud Ispahan" },
+    "slug": "dior-oud-ispahan",
+    "description": {
+      "en": "A genderless masterpiece inspired by the Isfahan rose gardens of Persia. Enveloping oud wood fuses with sensual Damascus rose, creating a powerful, opulent and deeply evocative scent that transcends time and space.",
+      "uz": "Forsning Isfahon atirgul bog'laridan ilhomlangan jinsiy farqsiz shoh asar. O'rab oluvchi ud yog'ochi hissiy Damashq atirguli bilan birlashib, vaqt va makondan oshib ketadigan kuchli, hashamatli va chuqur ta'sirli hid yaratadi.",
+      "ru": "Бесполый шедевр, вдохновлённый исфаханскими розовыми садами Персии. Обволакивающий уд сливается с чувственной дамасской розой, создавая мощный, роскошный и глубоко выразительный аромат вне времени и пространства."
+    },
+    "price": "330",
+    "compareAtPrice": null,
+    "images": ["https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800", "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=800"],
+    "categoryId": "oud",
+    "brandId": "dior",
+    "material": { "en": "Eau de Parfum, 125ml", "uz": "Parfyum suvi, 125ml", "ru": "Парфюмерная вода, 125мл" },
+    "weight": "125ml",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "chanel-coco-mademoiselle",
+    "name": { "en": "Chanel Coco Mademoiselle", "uz": "Chanel Coco Mademoiselle", "ru": "Chanel Coco Mademoiselle" },
+    "slug": "chanel-coco-mademoiselle",
+    "description": {
+      "en": "An irresistibly fresh oriental fragrance for the modern woman. Orange and bergamot sparkle above a heart of jasmine and rose, settling into a warm base of patchouli and white musk. Spirited and sensual.",
+      "uz": "Zamonaviy ayol uchun qarshisiga bo'lmaydigan yangi sharqona atir. Apelsin va bergamot yasemin va atirgul yuragida porlaydi, pachuli va oq muskusning issiq bazasiga joylashadi. Ruhli va hissiy.",
+      "ru": "Неотразимо свежий восточный аромат для современной женщины. Апельсин и бергамот сверкают над сердцем жасмина и розы, переходя в тёплую базу пачули и белого мускуса. Задорный и чувственный."
+    },
+    "price": "148",
+    "compareAtPrice": "172",
+    "images": ["https://images.unsplash.com/photo-1541643600914-78b084683601?w=800", "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800"],
+    "categoryId": "fresh-women",
+    "brandId": "chanel",
+    "material": { "en": "Eau de Parfum, 100ml", "uz": "Parfyum suvi, 100ml", "ru": "Парфюмерная вода, 100мл" },
+    "weight": "100ml",
+    "inStock": true,
+    "featured": true
+  }
+]

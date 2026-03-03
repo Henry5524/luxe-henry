@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Pencil, Trash2, Plus, X } from 'lucide-react';
+import { Pencil, Trash2, Plus, X, Upload, Download, Loader2 } from 'lucide-react';
+import { BulkImportModal } from './BulkImportModal';
 import { generateSlug, localize, emptyLocalized } from '@/lib/utils';
 import type { LocalizedField } from '@/lib/utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -31,6 +32,9 @@ export function BrandsClient({ initialBrands }: BrandsClientProps) {
     const [editing, setEditing] = useState<Brand | null>(null);
     const [showForm, setShowForm] = useState(false);
     const [saving, setSaving] = useState(false);
+    const [importOpen, setImportOpen] = useState(false);
+    const [exportingCSV, setExportingCSV] = useState(false);
+    const [exportingJSON, setExportingJSON] = useState(false);
     const [form, setForm] = useState<FormState>({ name: emptyLocalized(), slug: '' });
 
     function setLocalized(lang: string, value: string) {
@@ -89,16 +93,51 @@ export function BrandsClient({ initialBrands }: BrandsClientProps) {
         }
     }
 
+    async function handleExport(format: 'csv' | 'json') {
+        const setter = format === 'csv' ? setExportingCSV : setExportingJSON;
+        setter(true);
+        try {
+            const res = await fetch(`/api/admin/import/export?type=brands&format=${format}`);
+            const blob = await res.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `brands-export.${format}`;
+            a.click();
+            URL.revokeObjectURL(url);
+        } catch { alert('Export failed'); }
+        finally { setter(false); }
+    }
+
     const langTabs = ['en', 'uz', 'ru'] as const;
 
     return (
         <div>
-            <div className="mb-4 flex justify-end">
+            <div className="mb-4 flex flex-wrap items-center justify-end gap-2">
+                <button onClick={() => handleExport('csv')} disabled={exportingCSV}
+                    className="flex items-center gap-1 rounded-sm border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted disabled:opacity-60">
+                    {exportingCSV ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />} {t('exportCSV')}
+                </button>
+                <button onClick={() => handleExport('json')} disabled={exportingJSON}
+                    className="flex items-center gap-1 rounded-sm border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted disabled:opacity-60">
+                    {exportingJSON ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />} {t('exportJSON')}
+                </button>
+                <button onClick={() => setImportOpen(true)}
+                    className="flex items-center gap-1 rounded-sm border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">
+                    <Upload className="h-4 w-4" /> {t('import')}
+                </button>
                 <button onClick={openNew}
                     className="flex items-center gap-1 bg-gradient-gold px-5 py-2 text-sm font-semibold uppercase tracking-wide text-charcoal transition-all hover:brightness-110">
                     <Plus className="h-4 w-4" /> {t('newBrand')}
                 </button>
             </div>
+
+            <BulkImportModal
+                open={importOpen}
+                onOpenChange={setImportOpen}
+                entityType="brands"
+                onImportComplete={() => { router.refresh(); window.location.reload(); }}
+            />
 
             {brandsList.length === 0 ? (
                 <div className="rounded-lg border border-border bg-card p-8 text-center text-sm text-muted-foreground">
